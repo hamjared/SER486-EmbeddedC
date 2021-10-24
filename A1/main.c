@@ -5,6 +5,10 @@ Homework 1
 */
 #include "libs/uart.h"
 
+#define PINB (*((volatile char *)0x23))
+#define DDRB (*((volatile char *)0x24))
+#define PORTB (*((volatile char *)0x25))
+
 
 void writestr(char* message){
     unsigned int i = 0; // I sure hope our message is less than 65,535 characters, otherwise this might cause problems.
@@ -15,6 +19,10 @@ void writestr(char* message){
 }
 
 void getDigits(int size, char* msg);
+
+void delay(unsigned int milliseconds){
+
+}
 
 int main(void)
 {
@@ -43,8 +51,13 @@ int main(void)
     writestr("long size (bits) = "); writestr(msg); writestr(" bits\n");
 
     // Now loop forever.
-    while(1)
-    ;
+    DDRB |= 0x2; // Set PB1 as an output pin
+
+    while(1){
+       delay(2000);
+       PINB |= 0x2;
+    }
+
 
 
     return 0;

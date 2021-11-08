@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1635981544 source:/home/jared/SER486-EmbeddedC/A4/main.c
+	"uart.h"
+	"simpledelay.h"
+	"simpleled.h"
+	"temp.h"
+
+1635814957 /home/jared/SER486-EmbeddedC/A4/uart.h
+
+1635813873 /home/jared/SER486-EmbeddedC/A4/simpledelay.h
+
+1635813874 /home/jared/SER486-EmbeddedC/A4/simpleled.h
+
+1635981261 /home/jared/SER486-EmbeddedC/A4/temp.h
+
+1635989492 source:/home/jared/SER486-EmbeddedC/A4/temp.c
+
+1635981261 source:/home/jared/SER486-EmbeddedC/A4/temp.h
+

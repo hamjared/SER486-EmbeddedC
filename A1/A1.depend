@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1634614124 source:/home/jared/SER486-EmbeddedC/A1/main.c
+	"libs/uart.h"
+
+1634001491 /home/jared/SER486-EmbeddedC/A1/libs/uart.h
+

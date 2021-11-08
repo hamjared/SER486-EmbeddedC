@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1635427734 source:/home/jared/SER486-EmbeddedC/A3/main.c
+	"hw4lib.h"
+	"output.h"
+
+1635105948 /home/jared/SER486-EmbeddedC/A3/hw4lib.h
+
+1635105945 /home/jared/SER486-EmbeddedC/A3/output.h
+
+1635428816 source:/home/jared/SER486-EmbeddedC/A3/output.c
+	"hw4lib.h"
+

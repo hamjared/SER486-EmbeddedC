@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="A2" />
+		<Option title="A1" />
 		<Option pch_mode="2" />
 		<Option compiler="avr-gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/A2.elf" prefix_auto="1" extension_auto="0" />
+				<Option output="bin/Debug/A1.elf" prefix_auto="1" extension_auto="0" />
 				<Option working_dir="" />
 				<Option object_output="obj/Debug/" />
 				<Option type="5" />
@@ -17,14 +17,14 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/A2.elf" prefix_auto="1" extension_auto="0" />
+				<Option output="bin/Release/A1.elf" prefix_auto="1" extension_auto="0" />
 				<Option working_dir="" />
 				<Option object_output="obj/Release/" />
 				<Option type="5" />
 				<Option compiler="avr-gcc" />
-				<ExtraCommands>
-					<Add after="/snap/arduino/61/hardware/tools/avr/bin/avrdude -C/snap/arduino/61/hardware/tools/avr/etc/avrdude.conf -v -patmega328p -carduino -P/dev/ttyACM0 -b115200 -D -Uflash:w:$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).hex:i" />
-				</ExtraCommands>
+				<Compiler>
+					<Add option="-Os" />
+				</Compiler>
 			</Target>
 			<Environment>
 				<Variable name="MCU" value="atmega328p" />
@@ -38,6 +38,7 @@
 		<Linker>
 			<Add option="-mmcu=atmega328p" />
 			<Add option="-Wl,-Map=$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).map,--cref" />
+			<Add library="/home/jared/SER486-EmbeddedC/A1/libs/libserial.a" />
 		</Linker>
 		<ExtraCommands>
 			<Add after="avr-size $(TARGET_OUTPUT_FILE)" />
@@ -45,6 +46,7 @@
 			<Add after="avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).hex" />
 			<Add after="avr-objcopy --no-change-warnings -j .eeprom --change-section-lma .eeprom=0 -O ihex $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).eep" />
 		</ExtraCommands>
+		<Unit filename="libs/uart.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -52,11 +54,13 @@
 			<code_completion />
 			<envvars />
 			<debugger>
+				<remote_debugging>
+					<options conn_type="-1" serial_baud="115200" ip_address="127.0.0.1" ip_port="1212" />
+				</remote_debugging>
 				<remote_debugging target="Debug">
-					<options conn_type="0" serial_baud="115200" ip_address="127.0.0.1" ip_port="1212" additional_cmds="load" additional_shell_cmds_after='gnome-terminal -- /bin/sh -c &quot;stty erase 127 -isig -brkint -ignbrk -icanon -ctlecho -echo -inlcr; ~/simulavr/src/simulavr -g -E -x -F 16000000 -d atmega328 -f $(TARGET_OUTPUT_FILE)&quot; &amp;' additional_shell_cmds_before="killall simulavr" />
+					<options conn_type="0" serial_baud="115200" ip_address="127.0.0.1" ip_port="1212" additional_cmds="load" additional_shell_cmds_before='killall simulavr&#x0A;gnome-terminal -- /bin/sh -c &quot;stty erase 127 -isig -brkint -ignbrk -icanon -ctlecho -echo -inlcr; /home/jared/simulavr/src/simulavr -g -E -x -F 16000000 -d atmega328 -f $(TARGET_OUTPUT_FILE)&quot; &amp;' />
 				</remote_debugging>
 			</debugger>
-			<lib_finder disable_auto="1" />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

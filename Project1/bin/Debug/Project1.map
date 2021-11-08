@@ -1,0 +1,834 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(led_part.o)
+                              obj/Debug/main.o (led_init)
+/home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+                              obj/Debug/main.o (rtc_init)
+/home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(str.o)
+                              /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o) (str_cpy)
+/home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(uart.o)
+                              obj/Debug/main.o (uart_init)
+/home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(serial.o)
+                              /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(uart.o) (serial_init)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+                              /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o) (__mulsi3)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+                              /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o) (__udivmodhi4)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+                              /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o) (__udivmodsi4)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+                              /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(uart.o) (__divmodsi4)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+                              /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o) (__negsi2)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o (exit)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+                              obj/Debug/main.o (__do_copy_data)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+                              obj/Debug/delay.o (__do_clear_bss)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+                              /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o) (__umulhisi3)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                              /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o) (__muluhisi3)
+
+Allocating common symbols
+Common symbol       size              file
+
+rxbuf               0x40              /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(serial.o)
+rtc_base            0x4               /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+txbuf               0x40              /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(serial.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x0000000000000000 0x0000000000020000 xr
+data             0x0000000000800060 0x000000000000ffa0 rw !x
+eeprom           0x0000000000810000 0x0000000000010000 rw !x
+fuse             0x0000000000820000 0x0000000000000003 rw !x
+lock             0x0000000000830000 0x0000000000000400 rw !x
+signature        0x0000000000840000 0x0000000000000400 rw !x
+user_signatures  0x0000000000850000 0x0000000000000400 rw !x
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+LOAD obj/Debug/delay.o
+LOAD obj/Debug/led.o
+LOAD obj/Debug/main.o
+LOAD obj/Debug/timer1.o
+LOAD /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a
+LOAD /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a
+START GROUP
+LOAD /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libatmega328p.a
+END GROUP
+                0x0000000000020000                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x20000
+                0x000000000000ffa0                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
+                0x0000000000010000                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                [0x0000000000000003]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
+                0x0000000000000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
+                0x0000000000000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
+                0x0000000000000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x0000000000000000     0x1302
+ *(.vectors)
+ .vectors       0x0000000000000000       0x68 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+                0x0000000000000000                __vectors
+                0x0000000000000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+                0x0000000000000068                . = ALIGN (0x2)
+                0x0000000000000068                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000000000000068        0x0 linker stubs
+ *(.trampolines*)
+                0x0000000000000068                __trampolines_end = .
+ *libprintf_flt.a:*(.progmem.data)
+ *libc.a:*(.progmem.data)
+ *(.progmem*)
+                0x0000000000000068                . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000000000000068                __ctors_start = .
+ *(.ctors)
+                0x0000000000000068                __ctors_end = .
+                0x0000000000000068                __dtors_start = .
+ *(.dtors)
+                0x0000000000000068                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000000000000068        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+                0x0000000000000068                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000000000000068        0xc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x0000000000000074       0x16 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+                0x0000000000000074                __do_copy_data
+ .init4         0x000000000000008a       0x10 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+                0x000000000000008a                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x000000000000009a        0x8 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ *(.init9)
+ *(.text)
+ .text          0x00000000000000a2        0x4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+                0x00000000000000a2                __vector_22
+                0x00000000000000a2                __vector_1
+                0x00000000000000a2                __vector_24
+                0x00000000000000a2                __vector_12
+                0x00000000000000a2                __bad_interrupt
+                0x00000000000000a2                __vector_6
+                0x00000000000000a2                __vector_3
+                0x00000000000000a2                __vector_23
+                0x00000000000000a2                __vector_25
+                0x00000000000000a2                __vector_13
+                0x00000000000000a2                __vector_17
+                0x00000000000000a2                __vector_7
+                0x00000000000000a2                __vector_5
+                0x00000000000000a2                __vector_4
+                0x00000000000000a2                __vector_9
+                0x00000000000000a2                __vector_2
+                0x00000000000000a2                __vector_21
+                0x00000000000000a2                __vector_15
+                0x00000000000000a2                __vector_8
+                0x00000000000000a2                __vector_10
+                0x00000000000000a2                __vector_16
+                0x00000000000000a2                __vector_20
+ .text          0x00000000000000a6      0x25e obj/Debug/delay.o
+                0x0000000000000138                __vector_14
+                0x00000000000001e8                delay_get
+                0x0000000000000232                delay_set
+                0x00000000000002ac                delay_isdone
+ .text          0x0000000000000304      0x21e obj/Debug/led.o
+                0x000000000000037c                led_set_blink
+                0x00000000000003c0                led_update
+ .text          0x0000000000000522      0x116 obj/Debug/main.o
+                0x0000000000000522                main
+ .text          0x0000000000000638      0x17a obj/Debug/timer1.o
+                0x000000000000067a                __vector_11
+                0x00000000000006d6                timer1_init
+                0x0000000000000730                timer1_get
+                0x0000000000000780                timer1_clear
+ .text          0x00000000000007b2       0x18 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(led_part.o)
+                0x00000000000007b2                led_init
+                0x00000000000007b8                led_on
+                0x00000000000007bc                led_off
+                0x00000000000007c0                led_is_on
+ .text          0x00000000000007ca      0x5e6 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+                0x00000000000007ca                rtc_init
+                0x00000000000007ce                rtc_get_date
+                0x00000000000007f4                is_leapyear
+                0x0000000000000828                rtc_set_by_datestr
+                0x0000000000000af2                get_month
+                0x0000000000000b82                rtc_num2datestr
+                0x0000000000000d88                rtc_get_date_string
+ .text          0x0000000000000db0       0xd8 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(str.o)
+                0x0000000000000db0                str_cpy
+                0x0000000000000dc4                str_writeudec16
+ .text          0x0000000000000e88      0x194 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(uart.o)
+                0x0000000000000e88                uart_init
+                0x0000000000000e90                uart_writechar
+                0x0000000000000e94                uart_writestr
+                0x0000000000000eac                uart_writehex8
+                0x0000000000000ede                uart_writehex16
+                0x0000000000000ef0                uart_writedec32
+ .text          0x000000000000101c      0x1e4 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(serial.o)
+                0x000000000000101c                serial_init
+                0x0000000000001042                __vector_18
+                0x00000000000010a4                __vector_19
+                0x000000000000110a                serial_rxchars
+                0x0000000000001118                serial_popchar
+                0x000000000000114c                serial_writechar
+                0x00000000000011ac                serial_writestr
+                0x00000000000011d6                serial_writestr_P
+ .text          0x0000000000001200        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .text          0x0000000000001200        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .text          0x0000000000001200        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .text          0x0000000000001200        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .text          0x0000000000001200        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .text          0x0000000000001200        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text          0x0000000000001200        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text          0x0000000000001200        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text          0x0000000000001200        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .text          0x0000000000001200        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                0x0000000000001200                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc.mul
+                0x0000000000001200       0x20 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+                0x0000000000001200                __mulsi3
+ .text.libgcc.div
+                0x0000000000001220        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc   0x0000000000001220        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc.prologue
+                0x0000000000001220        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc.builtins
+                0x0000000000001220        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc.fmul
+                0x0000000000001220        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc.fixed
+                0x0000000000001220        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc.mul
+                0x0000000000001220        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.div
+                0x0000000000001220       0x28 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+                0x0000000000001220                __udivmodhi4
+ .text.libgcc   0x0000000000001248        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.prologue
+                0x0000000000001248        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.builtins
+                0x0000000000001248        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fmul
+                0x0000000000001248        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fixed
+                0x0000000000001248        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.mul
+                0x0000000000001248        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.div
+                0x0000000000001248       0x44 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+                0x0000000000001248                __udivmodsi4
+ .text.libgcc   0x000000000000128c        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.prologue
+                0x000000000000128c        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.builtins
+                0x000000000000128c        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.fmul
+                0x000000000000128c        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.fixed
+                0x000000000000128c        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.mul
+                0x000000000000128c        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .text.libgcc.div
+                0x000000000000128c       0x2e /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+                0x000000000000128c                __divmodsi4
+ .text.libgcc   0x00000000000012ba        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .text.libgcc.prologue
+                0x00000000000012ba        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .text.libgcc.builtins
+                0x00000000000012ba        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .text.libgcc.fmul
+                0x00000000000012ba        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .text.libgcc.fixed
+                0x00000000000012ba        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .text.libgcc.mul
+                0x00000000000012ba        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .text.libgcc.div
+                0x00000000000012ba       0x10 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+                0x00000000000012ba                __negsi2
+ .text.libgcc   0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .text.libgcc.prologue
+                0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .text.libgcc.builtins
+                0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .text.libgcc.fmul
+                0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .text.libgcc.fixed
+                0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .text.libgcc.mul
+                0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc   0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x00000000000012ca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x00000000000012ca       0x1e /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+                0x00000000000012ca                __umulhisi3
+ .text.libgcc.div
+                0x00000000000012e8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc   0x00000000000012e8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.prologue
+                0x00000000000012e8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.builtins
+                0x00000000000012e8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.fmul
+                0x00000000000012e8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.fixed
+                0x00000000000012e8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.mul
+                0x00000000000012e8       0x16 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                0x00000000000012e8                __muluhisi3
+ .text.libgcc.div
+                0x00000000000012fe        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+ .text.libgcc   0x00000000000012fe        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+ .text.libgcc.prologue
+                0x00000000000012fe        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+ .text.libgcc.builtins
+                0x00000000000012fe        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+ .text.libgcc.fmul
+                0x00000000000012fe        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+ .text.libgcc.fixed
+                0x00000000000012fe        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                0x00000000000012fe                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00000000000012fe        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                0x00000000000012fe                exit
+                0x00000000000012fe                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00000000000012fe        0x4 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ *(.fini0)
+                0x0000000000001302                _etext = .
+
+.siminfo        0x0000000000001302       0x28
+ .siminfo       0x0000000000001302       0x28 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(uart.o)
+                0x0000000000001302                siminfo_serial_out
+                0x000000000000130d                siminfo_serial_in
+                0x0000000000001318                siminfo_cpufrequency
+                0x000000000000131e                siminfo_device
+
+.data           0x0000000000800100       0x78 load address 0x000000000000132a
+                0x0000000000800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x0000000000800100        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ .data          0x0000000000800100        0x0 obj/Debug/delay.o
+ .data          0x0000000000800100        0x0 obj/Debug/led.o
+ .data          0x0000000000800100        0x0 obj/Debug/main.o
+ .data          0x0000000000800100        0x0 obj/Debug/timer1.o
+ .data          0x0000000000800100        0x0 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(led_part.o)
+ .data          0x0000000000800100       0x14 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+ .data          0x0000000000800114        0x0 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(str.o)
+ .data          0x0000000000800114        0x0 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(uart.o)
+ .data          0x0000000000800114        0x0 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(serial.o)
+ .data          0x0000000000800114        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .data          0x0000000000800114        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .data          0x0000000000800114        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .data          0x0000000000800114        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .data          0x0000000000800114        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .data          0x0000000000800114        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .data          0x0000000000800114        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .data          0x0000000000800114        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .data          0x0000000000800114        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .data          0x0000000000800114        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+ *(.data*)
+ *(.rodata)
+ .rodata        0x0000000000800114       0x43 obj/Debug/main.o
+ .rodata        0x0000000000800157        0xc /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+ *(.rodata*)
+ .rodata.str1.1
+                0x0000000000800163       0x14 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+ *(.gnu.linkonce.d*)
+                0x0000000000800178                . = ALIGN (0x2)
+ *fill*         0x0000000000800177        0x1 
+                0x0000000000800178                _edata = .
+                0x0000000000800178                PROVIDE (__data_end, .)
+
+.bss            0x0000000000800178       0x9b
+                0x0000000000800178                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0000000000800178        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ .bss           0x0000000000800178        0xa obj/Debug/delay.o
+ .bss           0x0000000000800182        0x5 obj/Debug/led.o
+ .bss           0x0000000000800187        0x0 obj/Debug/main.o
+ .bss           0x0000000000800187        0x4 obj/Debug/timer1.o
+ .bss           0x000000000080018b        0x0 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(led_part.o)
+ .bss           0x000000000080018b        0x0 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+ .bss           0x000000000080018b        0x0 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(str.o)
+ .bss           0x000000000080018b        0x0 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(uart.o)
+ .bss           0x000000000080018b        0x4 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(serial.o)
+                0x000000000080018b                txtail
+                0x000000000080018c                txhead
+                0x000000000080018d                rxtail
+                0x000000000080018e                rxhead
+ .bss           0x000000000080018f        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .bss           0x000000000080018f        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .bss           0x000000000080018f        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .bss           0x000000000080018f        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .bss           0x000000000080018f        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .bss           0x000000000080018f        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .bss           0x000000000080018f        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .bss           0x000000000080018f        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .bss           0x000000000080018f        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .bss           0x000000000080018f        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x000000000080018f        0x4 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+                0x000000000080018f                rtc_base
+ COMMON         0x0000000000800193       0x80 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(serial.o)
+                0x0000000000800193                rxbuf
+                0x00000000008001d3                txbuf
+                0x0000000000800213                PROVIDE (__bss_end, .)
+                0x000000000000132a                __data_load_start = LOADADDR (.data)
+                0x00000000000013a2                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x0000000000800213        0x0
+                [!provide]                        PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                [!provide]                        PROVIDE (__noinit_end, .)
+                0x0000000000800213                _end = .
+                [!provide]                        PROVIDE (__heap_start, .)
+
+.eeprom         0x0000000000810000        0x0
+ *(.eeprom*)
+                0x0000000000810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab           0x0000000000000000     0x15d8
+ *(.stab)
+ .stab          0x0000000000000000      0x6cc obj/Debug/delay.o
+ .stab          0x00000000000006cc      0x5ac obj/Debug/led.o
+                                        0x5b8 (size before relaxing)
+ .stab          0x0000000000000c78      0x3fc obj/Debug/main.o
+                                        0x408 (size before relaxing)
+ .stab          0x0000000000001074      0x564 obj/Debug/timer1.o
+                                        0x570 (size before relaxing)
+
+.stabstr        0x0000000000000000      0xb06
+ *(.stabstr)
+ .stabstr       0x0000000000000000      0xb06 obj/Debug/delay.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x11
+ *(.comment)
+ .comment       0x0000000000000000       0x11 obj/Debug/delay.o
+                                         0x12 (size before relaxing)
+ .comment       0x0000000000000011       0x12 obj/Debug/led.o
+ .comment       0x0000000000000011       0x12 obj/Debug/main.o
+ .comment       0x0000000000000011       0x12 obj/Debug/timer1.o
+ .comment       0x0000000000000011       0x12 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(led_part.o)
+ .comment       0x0000000000000011       0x12 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+ .comment       0x0000000000000011       0x12 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(str.o)
+ .comment       0x0000000000000011       0x12 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(uart.o)
+ .comment       0x0000000000000011       0x12 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(serial.o)
+
+.note.gnu.avr.deviceinfo
+                0x0000000000000000       0x40
+ .note.gnu.avr.deviceinfo
+                0x0000000000000000       0x40 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000      0x5f4
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000      0x5f4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+
+.debug_abbrev   0x0000000000000000      0x5a2
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000      0x5a2 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+
+.debug_line     0x0000000000000000       0x1a
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x0000000000000000       0x1a /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str      0x0000000000000000      0x208
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x208 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(bin/Debug/Project1.elf elf32-avr)
+LOAD linker stubs
+
+Cross Reference Table
+
+Symbol                                            File
+__FUSE_REGION_LENGTH__                            /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__bad_interrupt                                   /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__bss_end                                         /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+__bss_start                                       /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+__data_end                                        /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+__data_load_start                                 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+__data_start                                      /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+__divmodsi4                                       /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+                                                  /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(uart.o)
+__do_clear_bss                                    /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+                                                  /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(serial.o)
+                                                  /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+                                                  obj/Debug/timer1.o
+                                                  obj/Debug/led.o
+                                                  obj/Debug/delay.o
+__do_copy_data                                    /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+                                                  /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+                                                  obj/Debug/main.o
+__heap_end                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__init                                            /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__mulsi3                                          /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+                                                  /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+__muluhisi3                                       /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                                                  /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+                                                  /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(uart.o)
+                                                  /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+__negsi2                                          /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+                                                  /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+__stack                                           /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__udivmodhi4                                      /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+                                                  /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(str.o)
+                                                  /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+__udivmodsi4                                      /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+                                                  /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+                                                  /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+__umulhisi3                                       /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+                                                  /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                                                  /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+__vector_1                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_10                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_11                                       obj/Debug/timer1.o
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_12                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_13                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_14                                       obj/Debug/delay.o
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_15                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_16                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_17                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_18                                       /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(serial.o)
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_19                                       /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(serial.o)
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_2                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_20                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_21                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_22                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_23                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_24                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_25                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_3                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_4                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_5                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_6                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_7                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_8                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_9                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_default                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vectors                                         /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+_exit                                             /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+delay_get                                         obj/Debug/delay.o
+delay_isdone                                      obj/Debug/delay.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/led.o
+delay_set                                         obj/Debug/delay.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/led.o
+exit                                              /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+get_month                                         /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+is_leapyear                                       /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+led_init                                          /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(led_part.o)
+                                                  obj/Debug/main.o
+led_is_on                                         /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(led_part.o)
+led_off                                           /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(led_part.o)
+                                                  obj/Debug/led.o
+led_on                                            /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(led_part.o)
+                                                  obj/Debug/led.o
+led_set_blink                                     obj/Debug/led.o
+                                                  obj/Debug/main.o
+led_update                                        obj/Debug/led.o
+                                                  obj/Debug/main.o
+main                                              obj/Debug/main.o
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+rtc_base                                          /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+rtc_get_date                                      /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+rtc_get_date_string                               /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+                                                  obj/Debug/main.o
+rtc_init                                          /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+                                                  obj/Debug/main.o
+rtc_num2datestr                                   /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+rtc_set_by_datestr                                /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+                                                  obj/Debug/main.o
+rxbuf                                             /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(serial.o)
+rxhead                                            /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(serial.o)
+rxtail                                            /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(serial.o)
+serial_init                                       /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(serial.o)
+                                                  /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(uart.o)
+serial_popchar                                    /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(serial.o)
+serial_rxchars                                    /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(serial.o)
+serial_writechar                                  /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(serial.o)
+                                                  /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(uart.o)
+serial_writestr                                   /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(serial.o)
+serial_writestr_P                                 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(serial.o)
+siminfo_cpufrequency                              /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(uart.o)
+siminfo_device                                    /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(uart.o)
+siminfo_serial_in                                 /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(uart.o)
+siminfo_serial_out                                /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(uart.o)
+str_cpy                                           /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(str.o)
+                                                  /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+str_writeudec16                                   /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(str.o)
+                                                  /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+timer1_clear                                      obj/Debug/timer1.o
+                                                  /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+timer1_get                                        obj/Debug/timer1.o
+                                                  /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+timer1_init                                       obj/Debug/timer1.o
+                                                  /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(rtc.o)
+txbuf                                             /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(serial.o)
+txhead                                            /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(serial.o)
+txtail                                            /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(serial.o)
+uart_init                                         /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(uart.o)
+                                                  obj/Debug/main.o
+uart_writechar                                    /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(uart.o)
+uart_writedec32                                   /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(uart.o)
+                                                  obj/Debug/main.o
+uart_writehex16                                   /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(uart.o)
+uart_writehex8                                    /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(uart.o)
+uart_writestr                                     /home/jared/SER486-EmbeddedC/Project1/lib_proj1.a(uart.o)
+                                                  obj/Debug/main.o

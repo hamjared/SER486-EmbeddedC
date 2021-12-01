@@ -1,0 +1,61 @@
+# depslib dependency file v1.0
+1637554617 source:/home/jared/SER486-EmbeddedC/Project3/main.c
+	"alarm.h"
+	"config.h"
+	"delay.h"
+	"eeprom.h"
+	"led.h"
+	"log.h"
+	"rtc.h"
+	"temp.h"
+	"tempfsm.h"
+	"uart.h"
+	"uartsocket.h"
+	"util.h"
+	"process_packet.h"
+	"vpd.h"
+	"wdt.h"
+
+1570799814 /home/jared/SER486-EmbeddedC/Project3/alarm.h
+
+1570799814 /home/jared/SER486-EmbeddedC/Project3/config.h
+
+1570799814 /home/jared/SER486-EmbeddedC/Project3/delay.h
+
+1570799814 /home/jared/SER486-EmbeddedC/Project3/eeprom.h
+
+1570799814 /home/jared/SER486-EmbeddedC/Project3/led.h
+
+1570799814 /home/jared/SER486-EmbeddedC/Project3/log.h
+
+1570799814 /home/jared/SER486-EmbeddedC/Project3/rtc.h
+
+1570799814 /home/jared/SER486-EmbeddedC/Project3/temp.h
+
+1570799890 /home/jared/SER486-EmbeddedC/Project3/tempfsm.h
+
+1570799814 /home/jared/SER486-EmbeddedC/Project3/uart.h
+
+1570800714 /home/jared/SER486-EmbeddedC/Project3/uartsocket.h
+
+1570799814 /home/jared/SER486-EmbeddedC/Project3/util.h
+
+1570801072 /home/jared/SER486-EmbeddedC/Project3/process_packet.h
+
+1570799814 /home/jared/SER486-EmbeddedC/Project3/vpd.h
+
+1570799896 /home/jared/SER486-EmbeddedC/Project3/wdt.h
+
+1637630607 source:/home/jared/SER486-EmbeddedC/Project3/tempfsm.c
+	"alarm.h"
+	"log.h"
+	"led.h"
+
+1637554324 source:/home/jared/SER486-EmbeddedC/Project3/util.c
+	"config.h"
+
+1637551692 source:/home/jared/SER486-EmbeddedC/Project3/wdt.c
+	"config.h"
+	"led.h"
+	"log.h"
+

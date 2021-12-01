@@ -24,6 +24,21 @@
  static unsigned int blink_pos; // which character of the message is currently being blinked
  static unsigned char blink_state;
 
+
+/****
+set_delay_and_led(char c)
+
+This function sets the led state and delay time for a given character ('.', '-', ' ')
+
+arguments:
+    char - the morse code character ('.', '-', ' ')
+
+returns:
+    nothing
+changes:
+    The state of the led
+    The limit of the delay 0 timer is changed
+*/
  static void set_delay_and_led(char c){
     switch(c){
         case '-':
@@ -45,6 +60,21 @@
         }
  }
 
+ /****
+led_set_blink(char* msg)
+
+This function sets the message that the led will blink
+
+arguments:
+    char* - the message to blink morse code for.
+
+returns:
+    nothing
+
+changes:
+    the state of the led to off
+    The delay 0 timer is set to a limit of 0
+*/
  void led_set_blink(char* msg){
      // initialize message
     blink_msg = msg;
@@ -56,6 +86,21 @@
     led_off();
  }
 
+  /****
+led_update()
+
+This function updates the status of the led FSM
+
+arguments:
+    none
+
+returns:
+    nothing
+
+changes:
+    the state of the FSM
+    The limit of the delay 0 timer
+*/
  void led_update(){
      // if the message to blink is empty return
      if(blink_msg == '\0'){

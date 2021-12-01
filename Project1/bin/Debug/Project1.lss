@@ -99,10 +99,10 @@ Disassembly of section .text:
       a2:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
 000000a6 <delay_init>:
- static unsigned int count[] = {0,0};
- static unsigned int limit[] = {0,0};
-
- /**
+    The OCR0A register is changed to a compare value of 249
+    The TCCR0A is changed to enable CTC mode
+    the TCCR0B register is changed to set prescalar to 64
+    The TIMSK0 register is changed to enable interrupts on compare A
 */
 static void delay_init(){
       a6:	cf 93       	push	r28
@@ -167,7 +167,11 @@ static void delay_init(){
       f4:	08 95       	ret
 
 000000f6 <get_global_interrupt_state>:
-
+ returns
+    The status of global interruprs. 0 = off > 0 = on
+ changes
+    nothing
+*/
 static unsigned char get_global_interrupt_state(){
       f6:	cf 93       	push	r28
       f8:	df 93       	push	r29
@@ -185,7 +189,11 @@ static unsigned char get_global_interrupt_state(){
      10c:	08 95       	ret
 
 0000010e <set_global_interrupt_state>:
-
+ returns
+    none
+ changes
+    Changes the global interrupt bit of the SREG register
+*/
 static void set_global_interrupt_state(unsigned char state){
      10e:	cf 93       	push	r28
      110:	df 93       	push	r29
@@ -212,9 +220,9 @@ static void set_global_interrupt_state(unsigned char state){
      136:	08 95       	ret
 
 00000138 <__vector_14>:
-/**
-This function is what gets called when the timer0 interrupt is triggered.
-It increments the count for each timer
+    nothing
+NOTE:This function is only ever called by the Atmega 328p.
+
 */
 void __vector_14(void) __attribute__ ((signal, used, externally_visible));
 void __vector_14(void){
@@ -283,7 +291,7 @@ void __vector_14(void){
      1ae:	fc 01       	movw	r30, r24
      1b0:	31 83       	std	Z+1, r19	; 0x01
      1b2:	20 83       	st	Z, r18
-It increments the count for each timer
+
 */
 void __vector_14(void) __attribute__ ((signal, used, externally_visible));
 void __vector_14(void){
@@ -522,11 +530,11 @@ unsigned delay_isdone(unsigned int num){
      302:	08 95       	ret
 
 00000304 <set_delay_and_led>:
-
- static char* blink_msg;
- static unsigned int blink_pos; // which character of the message is currently being blinked
- static unsigned char blink_state;
-
+    nothing
+changes:
+    The state of the led
+    The limit of the delay 0 timer is changed
+*/
  static void set_delay_and_led(char c){
      304:	cf 93       	push	r28
      306:	df 93       	push	r29
@@ -602,6 +610,10 @@ unsigned delay_isdone(unsigned int num){
 
 0000037c <led_set_blink>:
 
+changes:
+    the state of the led to off
+    The delay 0 timer is set to a limit of 0
+*/
  void led_set_blink(char* msg){
      37c:	cf 93       	push	r28
      37e:	df 93       	push	r29
@@ -642,6 +654,10 @@ unsigned delay_isdone(unsigned int num){
 
 000003c0 <led_update>:
 
+changes:
+    the state of the FSM
+    The limit of the delay 0 timer
+*/
  void led_update(){
      3c0:	cf 93       	push	r28
      3c2:	df 93       	push	r29
@@ -827,8 +843,8 @@ unsigned delay_isdone(unsigned int num){
             break;
      50a:	00 00       	nop
      50c:	06 c0       	rjmp	.+12     	; 0x51a <__LOCK_REGION_LENGTH__+0x11a>
- }
-
+    The limit of the delay 0 timer
+*/
  void led_update(){
      // if the message to blink is empty return
      if(blink_msg == '\0'){
@@ -1008,6 +1024,7 @@ int main(void)
      60e:	0e 94 56 01 	call	0x2ac	; 0x2ac <delay_isdone>
      612:	89 2b       	or	r24, r25
      614:	71 f0       	breq	.+28     	; 0x632 <main+0x110>
+            // update the date every 500ms
             delay_set(1,500);
      616:	64 ef       	ldi	r22, 0xF4	; 244
      618:	71 e0       	ldi	r23, 0x01	; 1
@@ -1017,6 +1034,7 @@ int main(void)
             uart_writestr(rtc_get_date_string());
      622:	0e 94 c4 06 	call	0xd88	; 0xd88 <rtc_get_date_string>
      626:	0e 94 4a 07 	call	0xe94	; 0xe94 <uart_writestr>
+            // \r allows the date string to update without scrolling.
             uart_writestr("\r");
      62a:	85 e5       	ldi	r24, 0x55	; 85
      62c:	91 e0       	ldi	r25, 0x01	; 1
@@ -1028,11 +1046,11 @@ int main(void)
      636:	e9 cf       	rjmp	.-46     	; 0x60a <main+0xe8>
 
 00000638 <get_global_interrupt_state>:
-#define OCR1AH (*((volatile char *)0x89))
-#define OCR1AL (*((volatile char *)0x88))
-
-static volatile unsigned long count = 0;
-
+ returns
+    The status of global interruprs. 0 = off > 0 = on
+ changes
+    nothing
+*/
 static unsigned char get_global_interrupt_state(){
      638:	cf 93       	push	r28
      63a:	df 93       	push	r29
@@ -1050,7 +1068,11 @@ static unsigned char get_global_interrupt_state(){
      64e:	08 95       	ret
 
 00000650 <set_global_interrupt_state>:
-
+ returns
+    none
+ changes
+    Changes the global interrupt bit of the SREG register
+*/
 static void set_global_interrupt_state(unsigned char state){
      650:	cf 93       	push	r28
      652:	df 93       	push	r29
@@ -1124,8 +1146,11 @@ void __vector_11(void){
      6d4:	18 95       	reti
 
 000006d6 <timer1_init>:
-
-/* initialize timer1 for a 1 second periodic tick */
+changes:
+    OCR1AH and OCR1AL set for a compare value for 1s tick
+    TCCR1B set for CTC mode and for prescalar of 256
+    TIMSK1 set to enable interrupts on output compare A
+*/
 void timer1_init(){
      6d6:	cf 93       	push	r28
      6d8:	df 93       	push	r29
@@ -1193,8 +1218,11 @@ void timer1_init(){
      72e:	08 95       	ret
 
 00000730 <timer1_get>:
+    the current count of the timer. Which should be seconds since clear was called
 
-/* return the tick count value */
+changes:
+    global interrupts are disabled but restored before returning from the function.
+*/
 unsigned long timer1_get(){
      730:	cf 93       	push	r28
      732:	df 93       	push	r29
@@ -1249,8 +1277,11 @@ unsigned long timer1_get(){
      77e:	08 95       	ret
 
 00000780 <timer1_clear>:
+    none
 
-/* clear the value of the tick counter */
+changes:
+    global interrupts are disabled but restored before returning from the function.
+*/
 void timer1_clear(){
      780:	cf 93       	push	r28
      782:	df 93       	push	r29

@@ -1,8 +1,15 @@
-/*
-Jared Ham
-SER 486 Fall 2021
-Project 1
-*/
+/********************************************************
+ * main.c
+ *
+ * SER486 Project 1
+ * Fall 2021
+ * Written By:  Jared Ham
+ *
+ This file implements Project 1 of SER 486. Uart, led, and rtc are all intialized.
+ Assignement details are printed
+ Led is set to blink OK
+ Details are printed to measure performance of led_update
+ */
 
 #include "uart.h"
 #include "delay.h"
@@ -47,8 +54,10 @@ int main(void)
 
     while(1){
         if(delay_isdone(1)){
+            // update the date every 500ms
             delay_set(1,500);
             uart_writestr(rtc_get_date_string());
+            // \r allows the date string to update without scrolling.
             uart_writestr("\r");
         }
         led_update();

@@ -33,6 +33,18 @@
  static unsigned int limit[] = {0,0};
 
  /**
+ delay_init()
+
+ arguments
+    none
+
+ returns
+    nothing
+ changes
+    The OCR0A register is changed to a compare value of 249
+    The TCCR0A is changed to enable CTC mode
+    the TCCR0B register is changed to set prescalar to 64
+    The TIMSK0 register is changed to enable interrupts on compare A
 */
 static void delay_init(){
 
@@ -56,17 +68,46 @@ static void delay_init(){
     // set initialized to 1?
 }
 
+/**
+ get_global_interrupt_state()
+
+ arguments
+    none
+
+ returns
+    The status of global interruprs. 0 = off > 0 = on
+ changes
+    nothing
+*/
 static unsigned char get_global_interrupt_state(){
     return (SREG & 0x80);
 }
 
+/**
+ set_global_interrupt_state(unsigned char state)
+
+ arguments
+    unsigned char - the already shifted value to or equal into SREG. Ideally this value would be the value obtained from get_global_interrupt_state()
+
+ returns
+    none
+ changes
+    Changes the global interrupt bit of the SREG register
+*/
 static void set_global_interrupt_state(unsigned char state){
     SREG |= state;
 }
 
 /**
-This function is what gets called when the timer0 interrupt is triggered.
-It increments the count for each timer
+__vector_14(void)
+
+arguments:
+    none
+
+returns:
+    nothing
+NOTE:This function is only ever called by the Atmega 328p.
+
 */
 void __vector_14(void) __attribute__ ((signal, used, externally_visible));
 void __vector_14(void){

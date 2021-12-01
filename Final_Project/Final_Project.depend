@@ -1,0 +1,75 @@
+# depslib dependency file v1.0
+1638317622 source:/home/jared/SER486-EmbeddedC/Final_Project/main.c
+	"config.h"
+	"delay.h"
+	"dhcp.h"
+	"led.h"
+	"log.h"
+	"rtc.h"
+	"spi.h"
+	"uart.h"
+	"vpd.h"
+	"temp.h"
+	"socket.h"
+	"alarm.h"
+	"wdt.h"
+	"tempfsm.h"
+	"eeprom.h"
+	"ntp.h"
+	"w51.h"
+	"signature.h"
+	"httpfsm.h"
+
+1564432663 /home/jared/SER486-EmbeddedC/Final_Project/config.h
+
+1564432838 /home/jared/SER486-EmbeddedC/Final_Project/delay.h
+
+1524177000 /home/jared/SER486-EmbeddedC/Final_Project/dhcp.h
+
+1520446007 /home/jared/SER486-EmbeddedC/Final_Project/led.h
+
+1523113274 /home/jared/SER486-EmbeddedC/Final_Project/log.h
+
+1523480741 /home/jared/SER486-EmbeddedC/Final_Project/rtc.h
+
+1555443756 /home/jared/SER486-EmbeddedC/Final_Project/spi.h
+
+1524183663 /home/jared/SER486-EmbeddedC/Final_Project/uart.h
+
+1564433694 /home/jared/SER486-EmbeddedC/Final_Project/vpd.h
+
+1524183585 /home/jared/SER486-EmbeddedC/Final_Project/temp.h
+
+1524183371 /home/jared/SER486-EmbeddedC/Final_Project/socket.h
+
+1524177000 /home/jared/SER486-EmbeddedC/Final_Project/alarm.h
+
+1523124591 /home/jared/SER486-EmbeddedC/Final_Project/wdt.h
+
+1524183556 /home/jared/SER486-EmbeddedC/Final_Project/tempfsm.h
+
+1524179239 /home/jared/SER486-EmbeddedC/Final_Project/eeprom.h
+
+1524179957 /home/jared/SER486-EmbeddedC/Final_Project/ntp.h
+
+1560966140 /home/jared/SER486-EmbeddedC/Final_Project/w51.h
+
+1573501852 /home/jared/SER486-EmbeddedC/Final_Project/signature.h
+
+1638331607 source:/home/jared/SER486-EmbeddedC/Final_Project/httpfsm.c
+	"httpfsm.h"
+	"vpd.h"
+	"socket.h"
+	"temp.h"
+	"config.h"
+	"log.h"
+	"temputil.h"
+	"wdt.h"
+
+1638235551 /home/jared/SER486-EmbeddedC/Final_Project/httpfsm.h
+
+1638328216 /home/jared/SER486-EmbeddedC/Final_Project/temputil.h
+
+1638328281 source:/home/jared/SER486-EmbeddedC/Final_Project/temputil.c
+	"config.h"
+

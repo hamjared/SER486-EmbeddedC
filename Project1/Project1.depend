@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1636339174 source:/home/jared/SER486-EmbeddedC/Project1/main.c
+1636499919 source:/home/jared/SER486-EmbeddedC/Project1/main.c
 	"uart.h"
 	"delay.h"
 	"led.h"
@@ -15,13 +15,13 @@
 
 1636300948 /home/jared/SER486-EmbeddedC/Project1/uart.h
 
-1636333288 source:/home/jared/SER486-EmbeddedC/Project1/delay.c
+1636499007 source:/home/jared/SER486-EmbeddedC/Project1/delay.c
 
-1636333600 source:/home/jared/SER486-EmbeddedC/Project1/led.c
+1636499355 source:/home/jared/SER486-EmbeddedC/Project1/led.c
 	"led.h"
 	"delay.h"
 
-1636338776 source:/home/jared/SER486-EmbeddedC/Project1/timer1.c
+1636504175 source:/home/jared/SER486-EmbeddedC/Project1/timer1.c
 
 1636300946 source:/home/jared/SER486-EmbeddedC/Project1/led.h
 

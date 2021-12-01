@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1637295323 source:/home/jared/SER486-EmbeddedC/Project2/config.c
+	"eeprom.h"
+	"util.h"
+	"config.h"
+
+1637288564 source:/home/jared/SER486-EmbeddedC/Project2/eeprom.c
+	"eeprom.h"
+
+1637120254 /home/jared/SER486-EmbeddedC/Project2/eeprom.h
+
+1637299064 source:/home/jared/SER486-EmbeddedC/Project2/main.c
+	"uart.h"
+	"led.h"
+	"log.h"
+	"rtc.h"
+	"eeprom.h"
+	"util.h"
+	"vpd.h"
+	"config.h"
+
+1637075120 /home/jared/SER486-EmbeddedC/Project2/uart.h
+
+1637075117 /home/jared/SER486-EmbeddedC/Project2/led.h
+
+1637075118 /home/jared/SER486-EmbeddedC/Project2/rtc.h
+
+1637204086 /home/jared/SER486-EmbeddedC/Project2/util.h
+
+1637295695 source:/home/jared/SER486-EmbeddedC/Project2/util.c
+
+1637296296 source:/home/jared/SER486-EmbeddedC/Project2/vpd.c
+	"vpd.h"
+	"eeprom.h"
+	"util.h"
+
+1637296187 /home/jared/SER486-EmbeddedC/Project2/vpd.h
+
+1637293987 /home/jared/SER486-EmbeddedC/Project2/config.h
+
+1637075118 /home/jared/SER486-EmbeddedC/Project2/log.h
+

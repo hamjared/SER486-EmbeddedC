@@ -1,4 +1,15 @@
+/********************************************************
+ * timer1.c
+ *
+ * SER486 Project 1
+ * Fall 2021
+ * Written By:  Jared Ham
+ *
+ This file implements a 1 second tick timer. This allows for accurate time keeping,
+which the rtc class accomplishes through using this timer1 class
 
+
+ */
 #define SREG (*((volatile char *)0x5F))
 #define TCCR1A (*((volatile char *)0x80))
 #define TCCR1B (*((volatile char *)0x81))
@@ -8,10 +19,32 @@
 
 static volatile unsigned long count = 0;
 
+/**
+ get_global_interrupt_state()
+
+ arguments
+    none
+
+ returns
+    The status of global interruprs. 0 = off > 0 = on
+ changes
+    nothing
+*/
 static unsigned char get_global_interrupt_state(){
     return (SREG & 0x80);
 }
 
+/**
+ set_global_interrupt_state(unsigned char state)
+
+ arguments
+    unsigned char - the already shifted value to or equal into SREG. Ideally this value would be the value obtained from get_global_interrupt_state()
+
+ returns
+    none
+ changes
+    Changes the global interrupt bit of the SREG register
+*/
 static void set_global_interrupt_state(unsigned char state){
     SREG |= state;
 }
@@ -26,7 +59,22 @@ void __vector_11(void){
     count++;
 }
 
-/* initialize timer1 for a 1 second periodic tick */
+  /****
+timer1_init()
+
+This function sets the timer1 registers to a 1s tick rate
+
+arguments:
+    none
+
+returns:
+    nothing
+
+changes:
+    OCR1AH and OCR1AL set for a compare value for 1s tick
+    TCCR1B set for CTC mode and for prescalar of 256
+    TIMSK1 set to enable interrupts on output compare A
+*/
 void timer1_init(){
 
     // prescalar will be 64 and atmega328p has clock of 16mhz
@@ -48,7 +96,20 @@ void timer1_init(){
 
 }
 
-/* return the tick count value */
+  /****
+timer1_get()
+
+This function returns the current count of the timer
+
+arguments:
+    none
+
+returns:
+    the current count of the timer. Which should be seconds since clear was called
+
+changes:
+    global interrupts are disabled but restored before returning from the function.
+*/
 unsigned long timer1_get(){
 
     // Get current global interrupt enable bit state
@@ -68,7 +129,20 @@ unsigned long timer1_get(){
 
 }
 
-/* clear the value of the tick counter */
+  /****
+timer1_clear()
+
+Resets the count of this timer to 0
+
+arguments:
+    none
+
+returns:
+    none
+
+changes:
+    global interrupts are disabled but restored before returning from the function.
+*/
 void timer1_clear(){
      // Get current global interrupt enable bit state
     unsigned char saved_interrupt_state = get_global_interrupt_state();

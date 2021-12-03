@@ -3,6 +3,9 @@
 *
 * This is template code for the SER486 final exam.  Students may use this
 * as a starting point their final project.
+
+Modified by Jared Ham
+SER 486 final project
 */
 #include "config.h"
 #include "delay.h"

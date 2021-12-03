@@ -56,7 +56,7 @@
 
 1573501852 /home/jared/SER486-EmbeddedC/Final_Project/signature.h
 
-1638331607 source:/home/jared/SER486-EmbeddedC/Final_Project/httpfsm.c
+1638407769 source:/home/jared/SER486-EmbeddedC/Final_Project/httpfsm.c
 	"httpfsm.h"
 	"vpd.h"
 	"socket.h"
@@ -65,11 +65,13 @@
 	"log.h"
 	"temputil.h"
 	"wdt.h"
+	"rtc.h"
+	"uart.h"
 
 1638235551 /home/jared/SER486-EmbeddedC/Final_Project/httpfsm.h
 
 1638328216 /home/jared/SER486-EmbeddedC/Final_Project/temputil.h
 
-1638328281 source:/home/jared/SER486-EmbeddedC/Final_Project/temputil.c
+1638403309 source:/home/jared/SER486-EmbeddedC/Final_Project/temputil.c
 	"config.h"
 

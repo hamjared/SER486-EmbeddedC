@@ -28,14 +28,15 @@ changes:
 
 */
 int update_tcrit_hi(int value){
-    if(value <= config.hi_warn || value > 0x3FF){
-        return 1;
+    if(value > config.hi_warn){
+        config.hi_alarm = value;
+        config_set_modified();
+        config_update();
+        return 0;
     }
-    config.hi_alarm = value;
-    config_set_modified();
-    config_update();
 
-    return 0;
+
+    return 1;
 }
 
 
@@ -55,13 +56,13 @@ changes:
 
 */
 int update_twarn_hi(int value){
-    if(value < config.lo_warn || value > config.hi_alarm){
-        return 1;
+    if(value < config.hi_alarm && value > config.lo_warn){
+        config.hi_warn = value;
+        config_set_modified();
+        config_update();
+        return 0;
     }
-    config.hi_warn = value;
-    config_set_modified();
-    config_update();
-    return 0;
+    return 1;
 }
 
 

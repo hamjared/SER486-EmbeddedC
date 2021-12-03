@@ -1,3 +1,14 @@
+/*************************************************************************
+* httpfsm.c
+*
+* This code for implementing an http fsm which is used to receive and respond to
+http requests received on socket 0.
+
+Jared Ham
+SER 486 final project
+*/
+
+
 #include "httpfsm.h"
 #include "vpd.h"
 #include "socket.h"
@@ -6,9 +17,12 @@
 #include "log.h"
 #include "temputil.h"
 #include "wdt.h"
+#include "rtc.h"
+#include "uart.h"
 
 #define SOCKET_NUM 0 // the socket number to be used for processing http requests
 
+// define states for the FSM
 #define INITIAL_STATE 0
 #define FLUSH 1
 #define URI_PARSE 2
@@ -20,26 +34,74 @@
 #define BODY 8
 #define PROCESS_MESSAGE 9
 
-
-
 #define REQUEST_TYPE unsigned char
 
+// define variables to use to determine which temp variable to update on a put request
 #define UPDATE_TCRIT_HI 0
 #define UPDATE_TWARN_HI 1
 #define UPDATE_TCRIT_LO 2
 #define UPDATE_TWARN_LO 3
 
 
-
+// fsm state
 static unsigned char state;
 
+// the temp value to update. Should be one of UPDATE_X defines
 static unsigned char temp_value_to_update;
 
+// the value received in the put request for updating one of the temp limits
 static int update_temp_value;
 
+// variable to determine whether or not to rest device after http request has been verified.
 static unsigned char reset = 0;
 
+/**
+get_temp_state()()
 
+This function returns the current state of the device by comparing the current temperature to the
+temperature limits defined in config
+
+
+returns:
+    current state of the device
+changes:
+    NONE
+NOTE:
+    This is intended to be a private method of this "class"
+*/
+static char * get_temp_state(){
+    int temp = temp_get();
+    if(temp >= config.hi_alarm){
+        return  "CRIT_HI";
+    }
+    else if(temp >= config.hi_warn){
+        return "WARN_HI";
+    }
+    else if(temp <= config.lo_alarm){
+        return  "CRIT_LO";
+    }
+    else if(temp <= config.lo_warn){
+        return  "WARN_LO";
+    }
+    else {
+        return  "NORMAL";
+    }
+}
+
+/**
+get_temp_state()()
+
+This function sends the response for an HTTP get which is a json object of the current device state
+
+
+returns:
+    nothing
+changes:
+    The contents of the socket 0 write buffer
+    Closes the socket 0 write buffer before returning.
+NOTE:
+    This is intended to be a private method of this "class"
+*/
 static void httpfsm_send_get_response(){
     // write http response code
     socket_writestr(SOCKET_NUM, "HTTP/1.1 200 OK\n");
@@ -72,7 +134,7 @@ static void httpfsm_send_get_response(){
     socket_writequotedstring(SOCKET_NUM,"temperature"); socket_writestr(SOCKET_NUM, ":"); socket_writedec32(SOCKET_NUM, temp_get()); socket_writestr(SOCKET_NUM, ",");
 
     //write state
-    socket_writequotedstring(SOCKET_NUM,"state"); socket_writestr(SOCKET_NUM, ":"); socket_writequotedstring(SOCKET_NUM, " "); socket_writestr(SOCKET_NUM, ",");
+    socket_writequotedstring(SOCKET_NUM,"state"); socket_writestr(SOCKET_NUM, ":"); socket_writequotedstring(SOCKET_NUM, get_temp_state()); socket_writestr(SOCKET_NUM, ",");
 
     // write log
     socket_writequotedstring(SOCKET_NUM,"log"); socket_writestr(SOCKET_NUM, ":[");
@@ -82,7 +144,7 @@ static void httpfsm_send_get_response(){
         unsigned char event ;
         log_get_record(i, &timestamp, &event);
         socket_writestr(SOCKET_NUM, "{");
-        socket_writequotedstring(SOCKET_NUM,"timestamp"); socket_writestr(SOCKET_NUM, ":"); socket_writedate(SOCKET_NUM, timestamp); socket_writestr(SOCKET_NUM, ",");
+        socket_writequotedstring(SOCKET_NUM,"timestamp"); socket_writestr(SOCKET_NUM, ":"); socket_writequotedstring(SOCKET_NUM, rtc_num2datestr(timestamp)); socket_writestr(SOCKET_NUM, ",");
 
         socket_writequotedstring(SOCKET_NUM,"event"); socket_writestr(SOCKET_NUM, ":"); socket_writedec32(SOCKET_NUM, event);
         socket_writestr(SOCKET_NUM, "}");
@@ -101,6 +163,19 @@ static void httpfsm_send_get_response(){
     socket_disconnect(SOCKET_NUM);
 }
 
+/**
+get_temp_state()()
+
+This function sends an HTTP OK response and disconnects the socket 0 upon completion
+
+returns:
+    nothing
+changes:
+    The contents of the socket 0 write buffer
+    Closes the socket 0 write buffer before returning.
+NOTE:
+    This is intended to be a private method of this "class"
+*/
 static void httpfsm_send_ok_response(){
     socket_writestr(SOCKET_NUM, "HTTP/1.1 200 OK\n");
     socket_writestr(SOCKET_NUM, "Connection: close\r\n");
@@ -108,7 +183,20 @@ static void httpfsm_send_ok_response(){
     socket_disconnect(SOCKET_NUM);
 }
 
+/**
+get_temp_state()()
 
+This function sends the HTTP 400 response
+
+
+returns:
+    nothing
+changes:
+    The contents of the socket 0 write buffer
+    Closes the socket 0 write buffer before returning.
+NOTE:
+    This is intended to be a private method of this "class"
+*/
 static void httpfsm_send_error_response(){
     socket_writestr(SOCKET_NUM, "HTTP/1.1 400 Bad Request\n");
     socket_writestr(SOCKET_NUM, "Connection: close\r\n");
@@ -177,15 +265,19 @@ static unsigned char httpfsm_process_put(){
 
     if(socket_recv_compare(SOCKET_NUM, "/config?")){
         if(socket_recv_compare(SOCKET_NUM, "tcrit_hi=")){
+            uart_writestr("Updating tcrit_hi with value: ");
             temp_value_to_update = UPDATE_TCRIT_HI;
         }
         else if (socket_recv_compare(SOCKET_NUM, "twarn_hi=")){
+            uart_writestr("Updating twarn_hi with value: ");
             temp_value_to_update = UPDATE_TWARN_HI;
         }
         else if (socket_recv_compare(SOCKET_NUM, "tcrit_lo=")){
+            uart_writestr("Updating tcrit_lo with value: ");
             temp_value_to_update = UPDATE_TCRIT_LO;
         }
         else if (socket_recv_compare(SOCKET_NUM, "twarn_lo=")){
+            uart_writestr("Updating twarn_lo with value: ");
             temp_value_to_update = UPDATE_TWARN_LO;
         }
         else{
@@ -196,6 +288,9 @@ static unsigned char httpfsm_process_put(){
         if(!socket_recv_int(SOCKET_NUM, &update_temp_value)){
             return 0;
         }
+
+        uart_writedec32((long)update_temp_value);
+        uart_writestr("\r\n");
 
 
         // One valid resource for a put command is config
@@ -211,7 +306,6 @@ static unsigned char httpfsm_process_put(){
         else{
             return 0;
         }
-
         // Another valid resource for a put command
         return 1;
     }
@@ -239,9 +333,35 @@ static unsigned char httpfsm_process_delete(){
         return 0;
     }
 
+    unsigned char buf[2];
+    socket_peek(SOCKET_NUM, buf);
+    if(buf[0] != ' '){
+        // there must be a space after /log otherwise an invalid uri was passed in for a delete request.
+        return 0;
+    }
+
+    log_clear();
+
+
     return 1;
 }
 
+/**
+httpfsm_do_put()
+
+This function performs the action of an HTTP put request. Call this after verifying the
+entire request was valid. It sends the corresponding HTTP request and closes socket 0 before returning
+
+
+returns:
+    nothing
+changes:
+    The config values for temperature limits
+    The contents of the socket 0 write buffer
+    Closes the socket 0 write buffer before returning.
+NOTE:
+    This is intended to be a private method of this "class"
+*/
 static void httpfsm_do_put(){
     if(reset > 0){
         httpfsm_send_ok_response();
@@ -285,12 +405,24 @@ static void httpfsm_do_put(){
     }
 }
 
+/**
+httpfsm_update()
+
+This function updates the fsm for http requests.
+
+
+returns:
+    nothing
+changes:
+    The state of the socket 0 receive and write buffers
+
+NOTE:
+    call httpfsm_init() before calling this function.
+*/
 void httpfsm_update(){
     static REQUEST_TYPE request_type;
-
     switch(state){
     case INITIAL_STATE:
-        reset = 0;
         if(socket_recv_compare(SOCKET_NUM, "GET")){
                 request_type = GET;
                 state = GET;
@@ -365,6 +497,9 @@ void httpfsm_update(){
         else if (request_type == PUT){
             httpfsm_do_put();
         }
+        else if (request_type == DELETE){
+            httpfsm_send_ok_response();
+        }
 
         state = INITIAL_STATE;
         break;
@@ -372,11 +507,30 @@ void httpfsm_update(){
 
 }
 
+/**
+httpfsm_init()
+
+This function initializes the httpfsm state machine
+
+
+returns:
+    nothing
+*/
 void httpfsm_init(){
     state = INITIAL_STATE;
     reset = 0;
 }
 
+/**
+httpfsm_init()
+
+This function resets the httpfsm state machine. It will flush the contents of socket 0 and then
+return to the Intitial state
+
+
+returns:
+    nothing
+*/
 void httpfsm_reset(){
     state = FLUSH;
 }

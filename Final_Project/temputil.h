@@ -1,3 +1,11 @@
+/*************************************************************************
+* temputil.h
+*
+Jared Ham
+SER 486 Final Project
+Fall 2021
+*/
+
 #ifndef TEMPUTIL_H_INCLUDED
 #define TEMPUTIL_H_INCLUDED
 

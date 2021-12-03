@@ -211,7 +211,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000     0x4e56
+.text           0x0000000000000000     0x4f02
  *(.vectors)
  .vectors       0x0000000000000000       0x68 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
                 0x0000000000000000                __vectors
@@ -294,466 +294,466 @@ END GROUP
                 0x00000000000000c8                __vector_10
                 0x00000000000000c8                __vector_16
                 0x00000000000000c8                __vector_20
- .text          0x00000000000000cc      0x5e2 obj/Release/httpfsm.o
+ .text          0x00000000000000cc      0x696 obj/Release/httpfsm.o
                 0x000000000000015c                httpfsm_update
-                0x000000000000069c                httpfsm_init
-                0x00000000000006a6                httpfsm_reset
- .text          0x00000000000006ae        0x0 obj/Release/main.o
- .text          0x00000000000006ae       0xcc obj/Release/temputil.o
-                0x00000000000006ae                update_tcrit_hi
-                0x00000000000006e0                update_twarn_hi
-                0x0000000000000718                update_tcrit_lo
-                0x0000000000000742                update_twarn_lo
- .text          0x000000000000077a      0x18c /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(alarm.o)
-                0x000000000000077a                alarm_init
-                0x000000000000077c                alarm_send
- .text          0x0000000000000906       0xf0 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(config.o)
-                0x0000000000000906                config_set_modified
-                0x000000000000090e                config_is_data_valid
-                0x000000000000094e                config_write_defaults
-                0x0000000000000968                config_init
-                0x000000000000099e                config_update
-                0x00000000000009ce                config_update_noisr
- .text          0x00000000000009f6      0x19e /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(delay.o)
-                0x00000000000009f6                __vector_14
-                0x0000000000000a98                delay_init
-                0x0000000000000abc                delay_get
-                0x0000000000000adc                delay_isdone
-                0x0000000000000b0e                delay_set
-                0x0000000000000b62                millis
- .text          0x0000000000000b94      0xbfc /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(Dhcp.o)
-                0x0000000000000b94                dhcp_getLocalIp
-                0x0000000000000b9a                dhcp_getSubnetMask
-                0x0000000000000ba0                dhcp_getGatewayIp
-                0x0000000000000ba6                dhcp_getDhcpServerIp
-                0x0000000000000bac                dhcp_getDnsServerIp
-                0x0000000000000bb2                _ZN9DhcpClass16reset_DHCP_leaseEv
-                0x0000000000000bbe                _ZN9DhcpClass12presend_DHCPEv
-                0x0000000000000bc0                _ZN9DhcpClass17parseDHCPResponseEmRm
-                0x0000000000000ff6                _ZN9DhcpClass10getLocalIpEv
-                0x0000000000000ffa                _ZN9DhcpClass13getSubnetMaskEv
-                0x0000000000000ffe                _ZN9DhcpClass12getGatewayIpEv
-                0x0000000000001002                _ZN9DhcpClass15getDhcpServerIpEv
-                0x0000000000001006                _ZN9DhcpClass14getDnsServerIpEv
-                0x000000000000100a                _ZN9DhcpClass9printByteEPch
-                0x0000000000001034                _ZN9DhcpClass17send_DHCP_MESSAGEEhj
-                0x00000000000012b0                _ZN9DhcpClass18request_DHCP_leaseEv
-                0x00000000000015ac                _ZN9DhcpClass13beginWithDHCPEPhmm
-                0x000000000000162a                dhcp_start
-                0x000000000000164e                _ZN9DhcpClass10checkLeaseEv
-                0x0000000000001788                dhcp_checkLease
- .text          0x0000000000001790      0x12c /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(eeprom.o)
-                0x0000000000001790                eeprom_startwrite
-                0x0000000000001796                __vector_22
-                0x0000000000001822                eeprom_writebuf
-                0x000000000000185c                eeprom_writebuf_noisr
-                0x000000000000188a                eeprom_readbuf
-                0x00000000000018b4                eeprom_isbusy
- .text          0x00000000000018bc       0xfc /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(led.o)
-                0x00000000000018bc                led_init
-                0x00000000000018ce                led_on
-                0x00000000000018d2                led_off
-                0x00000000000018d6                led_set_blink
-                0x00000000000018fa                led_update
-                0x00000000000019ae                led_is_on
- .text          0x00000000000019b8      0x43c /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(log.o)
-                0x00000000000019b8                log_is_data_valid
-                0x0000000000001a04                log_init
-                0x0000000000001b8e                log_update
-                0x0000000000001bfa                log_update_noisr
-                0x0000000000001c5e                log_add_record
-                0x0000000000001d00                log_clear
-                0x0000000000001d3a                log_get_num_entries
-                0x0000000000001d6c                log_get_record
- .text          0x0000000000001df4      0x1be /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(ntp.o)
-                0x0000000000001df4                ntp_sync_network_time
- .text          0x0000000000001fb2      0x5d8 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(rtc.o)
-                0x0000000000001fb2                rtc_init
-                0x0000000000001fb6                rtc_get_date
-                0x0000000000001fba                rtc_set_date
-                0x0000000000001fce                is_leapyear
-                0x0000000000002002                rtc_set_by_datestr
-                0x00000000000022cc                get_month
-                0x000000000000235c                rtc_num2datestr
-                0x0000000000002562                rtc_get_date_string
- .text          0x000000000000258a       0xea /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(signature.o)
-                0x000000000000258a                signature_set
-                0x0000000000002652                check_for_test_start
- .text          0x0000000000002674      0xb78 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(socket.o)
-                0x0000000000002674                udpsocket_open_multicast
-                0x00000000000026fa                udpsocket_is_open
-                0x000000000000270a                socket_is_active
-                0x0000000000002726                socket_is_listening
-                0x0000000000002736                socket_is_established
-                0x0000000000002746                socket_is_closed
-                0x0000000000002754                udpsocket_is_closed
-                0x0000000000002758                socket_close
-                0x00000000000027be                udpsocket_open
-                0x00000000000027c6                socket_open
-                0x00000000000027ce                udpsocket_close
-                0x00000000000027d2                socket_listen
-                0x00000000000027f0                socket_connect
-                0x0000000000002858                socket_disconnect
-                0x000000000000285e                socket_send
-                0x00000000000028ea                socket_recv
-                0x000000000000295e                socket_recv_available
-                0x0000000000002962                udpsocket_recv_available
-                0x0000000000002966                socket_peek
-                0x0000000000002976                udpsocket_sendto
-                0x0000000000002a1a                udpsocket_recv_data
-                0x0000000000002a5c                udpsocket_recvfrom
-                0x0000000000002bae                socket_igmpsend
-                0x0000000000002c0c                udpsocket_add_to_datagram
-                0x0000000000002c52                socket_writestr
-                0x0000000000002c72                socket_writechar
-                0x0000000000002c94                socket_writequotedstring
-                0x0000000000002cba                socket_writedate
-                0x0000000000002cd4                socket_writehex8
-                0x0000000000002d10                socket_write_macaddress
-                0x0000000000002d62                socket_writehex16
-                0x0000000000002d7c                socket_writedec32
-                0x0000000000002ea2                udpsocket_start_datagram
-                0x0000000000002eec                udpsocket_send_datagram
-                0x0000000000002f28                socket_received_line
-                0x0000000000002f84                socket_is_blank_line
-                0x0000000000002fc8                socket_recv_compare
-                0x0000000000003074                socket_flush_line
-                0x0000000000003106                socket_recv_int
- .text          0x00000000000031ec       0x5c /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(spi.o)
-                0x00000000000031ec                spi_init
-                0x0000000000003210                spi_is_locked
-                0x0000000000003216                spi_begin_transfer
-                0x0000000000003232                spi_transfer
-                0x0000000000003240                spi_end_transfer
- .text          0x0000000000003248      0x144 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(str.o)
-                0x0000000000003248                mem_cpy
-                0x0000000000003260                mem_set
-                0x0000000000003274                mem_cmp
-                0x00000000000032a2                str_cpy
-                0x00000000000032b6                str_len
-                0x00000000000032c8                str_writeudec16
- .text          0x000000000000338c       0x6e /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(temp.o)
-                0x000000000000338c                temp_init
-                0x000000000000339a                temp_is_data_ready
-                0x00000000000033b0                temp_start
-                0x00000000000033bc                temp_get
- .text          0x00000000000033fa      0x170 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(tempfsm.o)
-                0x00000000000033fa                tempfsm_init
-                0x00000000000033fc                tempfsm_update
-                0x0000000000003560                tempfsm_reset
- .text          0x000000000000356a       0x9a /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(timer1.o)
-                0x000000000000356a                __vector_11
-                0x00000000000035b4                timer1_init
-                0x00000000000035d4                timer1_get
-                0x00000000000035ec                timer1_clear
- .text          0x0000000000003604      0x23c /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(uart.o)
-                0x0000000000003604                uart_init
-                0x000000000000360c                uart_writechar
-                0x0000000000003610                uart_writestr
-                0x0000000000003628                uart_writehex8
-                0x000000000000365a                uart_writehex16
-                0x000000000000366c                uart_writedec32
-                0x0000000000003794                uart_is_connected
-                0x0000000000003798                uart_is_packet_available
-                0x000000000000379c                uart_readpacket
-                0x00000000000037fc                uart_writeip
- .text          0x0000000000003840      0x214 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(util.o)
-                0x0000000000003840                str_cmp
-                0x0000000000003876                update_checksum
-                0x000000000000389e                random_seed
-                0x00000000000038d4                random
-                0x00000000000039d6                strtoi
- .text          0x0000000000003a54       0xc6 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(vpd.o)
-                0x0000000000003a54                vpd_is_data_valid
-                0x0000000000003a94                vpd_write_defaults
-                0x0000000000003ae8                vpd_init
- .text          0x0000000000003b1a      0xbfe /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(w5x00.o)
-                0x0000000000003b1a                W5x_writebuf
-                0x0000000000003c20                W5x_write
-                0x0000000000003c42                W5x_config
-                0x0000000000003dde                W5x_readbuf
-                0x0000000000003ee8                W5x_read
-                0x0000000000003f0a                W5x_readSn
-                0x0000000000003f1a                W5x_writeSn
-                0x0000000000003f30                W5x_readbufSn
-                0x0000000000003f46                W5x_writebufSn
-                0x0000000000003f5c                W5x_read_data
-                0x0000000000003fe2                W5x_writeMR
-                0x0000000000003fec                W5x_readMR
-                0x0000000000003ff4                isW5100
-                0x000000000000406a                isW5500
-                0x00000000000040e0                W5x_init
-                0x00000000000040ee                W5x_writebufGAR
-                0x00000000000040fc                W5x_readbufGAR
-                0x000000000000410a                W5x_writebufSUBR
-                0x0000000000004118                W5x_readbufSUBR
-                0x0000000000004126                W5x_writebufSHAR
-                0x0000000000004134                W5x_readbufSHAR
-                0x0000000000004142                W5x_writebufSIPR
-                0x0000000000004150                W5x_readbufSIPR
-                0x000000000000415e                W5x_writeIR
-                0x0000000000004168                W5x_readIR
-                0x0000000000004170                W5x_writeRTR
-                0x000000000000418a                W5x_readRTR
-                0x00000000000041b4                W5x_writebufUIPR
-                0x00000000000041c2                W5x_readbufUIPR
-                0x00000000000041d0                W5x_writeUPORT
-                0x00000000000041ea                W5x_readUPORT
-                0x0000000000004214                W5x_writeSnMR
-                0x000000000000421e                W5x_readSnMR
-                0x0000000000004226                W5x_writeSnCR
-                0x0000000000004230                W5x_readSnCR
-                0x0000000000004238                W5x_execCmdSn
-                0x000000000000424e                W5x_writeSnIR
-                0x0000000000004258                W5x_readSnIR
-                0x0000000000004260                W5x_writeSnSR
-                0x000000000000426a                W5x_readSnSR
-                0x0000000000004272                W5x_writeSnPORT
-                0x0000000000004294                W5x_readSnPORT
-                0x00000000000042c4                W5x_writeSnDHAR
-                0x00000000000042d2                W5x_readSnDHAR
-                0x00000000000042e0                W5x_writeSnDIPR
-                0x00000000000042ee                W5x_readSnDIPR
-                0x00000000000042fc                W5x_writeSnDPORT
-                0x000000000000431e                W5x_readSnDPORT
-                0x000000000000434e                W5x_writeSnMSSR
-                0x0000000000004370                W5x_readSnMSSR
-                0x00000000000043a0                W5x_writeSnTX_FSR
-                0x00000000000043c2                W5x_readSnTX_FSR
-                0x00000000000043f2                W5x_getTXFreeSize
-                0x000000000000442a                W5x_writeSnTX_RD
-                0x000000000000444c                W5x_readSnTX_RD
-                0x000000000000447c                W5x_writeSnTX_WR
-                0x000000000000449e                W5x_send_data_processing_offset
-                0x0000000000004534                W5x_send_data_processing
-                0x0000000000004540                W5x_readSnTX_WR
-                0x0000000000004570                W5x_writeSnRX_RSR
-                0x0000000000004592                W5x_readSnRX_RSR
-                0x00000000000045c2                W5x_getRXReceivedSize
-                0x00000000000045fa                W5x_writeSnRX_RD
-                0x000000000000461c                W5x_readSnRX_RD
-                0x000000000000464c                W5x_recv_data_processing_offset
-                0x00000000000046b6                W5x_recv_data_processing
-                0x00000000000046c6                W5x_writeSnRX_WR
-                0x00000000000046e8                W5x_readSnRX_WR
- .text          0x0000000000004718       0x46 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(wdt.o)
-                0x0000000000004718                __vector_6
-                0x0000000000004736                wdt_init
-                0x000000000000474e                wdt_reset
-                0x0000000000004752                wdt_force_restart
- .text          0x000000000000475e      0x43c /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(serial.o)
-                0x000000000000475e                serial_init
-                0x0000000000004784                __vector_18
-                0x00000000000049d4                __vector_19
-                0x0000000000004a3a                serial_rxchars
-                0x0000000000004a48                serial_popchar
-                0x0000000000004a92                serial_isconnected
-                0x0000000000004ae0                serial_is_packet_ready
-                0x0000000000004ae6                serial_writechar
-                0x0000000000004b46                serial_writestr
-                0x0000000000004b70                serial_writestr_P
- .text          0x0000000000004b9a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
- .text          0x0000000000004b9a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
- .text          0x0000000000004b9a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
- .text          0x0000000000004b9a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
- .text          0x0000000000004b9a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
- .text          0x0000000000004b9a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
- .text          0x0000000000004b9a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
- .text          0x0000000000004b9a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
- .text          0x0000000000004b9a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
- .text          0x0000000000004b9a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
- .text          0x0000000000004b9a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
- .text          0x0000000000004b9a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
- .text          0x0000000000004b9a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
-                0x0000000000004b9a                . = ALIGN (0x2)
+                0x0000000000000750                httpfsm_init
+                0x000000000000075a                httpfsm_reset
+ .text          0x0000000000000762        0x0 obj/Release/main.o
+ .text          0x0000000000000762       0xc4 obj/Release/temputil.o
+                0x0000000000000762                update_tcrit_hi
+                0x000000000000078c                update_twarn_hi
+                0x00000000000007c4                update_tcrit_lo
+                0x00000000000007ee                update_twarn_lo
+ .text          0x0000000000000826      0x18c /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(alarm.o)
+                0x0000000000000826                alarm_init
+                0x0000000000000828                alarm_send
+ .text          0x00000000000009b2       0xf0 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(config.o)
+                0x00000000000009b2                config_set_modified
+                0x00000000000009ba                config_is_data_valid
+                0x00000000000009fa                config_write_defaults
+                0x0000000000000a14                config_init
+                0x0000000000000a4a                config_update
+                0x0000000000000a7a                config_update_noisr
+ .text          0x0000000000000aa2      0x19e /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(delay.o)
+                0x0000000000000aa2                __vector_14
+                0x0000000000000b44                delay_init
+                0x0000000000000b68                delay_get
+                0x0000000000000b88                delay_isdone
+                0x0000000000000bba                delay_set
+                0x0000000000000c0e                millis
+ .text          0x0000000000000c40      0xbfc /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(Dhcp.o)
+                0x0000000000000c40                dhcp_getLocalIp
+                0x0000000000000c46                dhcp_getSubnetMask
+                0x0000000000000c4c                dhcp_getGatewayIp
+                0x0000000000000c52                dhcp_getDhcpServerIp
+                0x0000000000000c58                dhcp_getDnsServerIp
+                0x0000000000000c5e                _ZN9DhcpClass16reset_DHCP_leaseEv
+                0x0000000000000c6a                _ZN9DhcpClass12presend_DHCPEv
+                0x0000000000000c6c                _ZN9DhcpClass17parseDHCPResponseEmRm
+                0x00000000000010a2                _ZN9DhcpClass10getLocalIpEv
+                0x00000000000010a6                _ZN9DhcpClass13getSubnetMaskEv
+                0x00000000000010aa                _ZN9DhcpClass12getGatewayIpEv
+                0x00000000000010ae                _ZN9DhcpClass15getDhcpServerIpEv
+                0x00000000000010b2                _ZN9DhcpClass14getDnsServerIpEv
+                0x00000000000010b6                _ZN9DhcpClass9printByteEPch
+                0x00000000000010e0                _ZN9DhcpClass17send_DHCP_MESSAGEEhj
+                0x000000000000135c                _ZN9DhcpClass18request_DHCP_leaseEv
+                0x0000000000001658                _ZN9DhcpClass13beginWithDHCPEPhmm
+                0x00000000000016d6                dhcp_start
+                0x00000000000016fa                _ZN9DhcpClass10checkLeaseEv
+                0x0000000000001834                dhcp_checkLease
+ .text          0x000000000000183c      0x12c /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(eeprom.o)
+                0x000000000000183c                eeprom_startwrite
+                0x0000000000001842                __vector_22
+                0x00000000000018ce                eeprom_writebuf
+                0x0000000000001908                eeprom_writebuf_noisr
+                0x0000000000001936                eeprom_readbuf
+                0x0000000000001960                eeprom_isbusy
+ .text          0x0000000000001968       0xfc /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(led.o)
+                0x0000000000001968                led_init
+                0x000000000000197a                led_on
+                0x000000000000197e                led_off
+                0x0000000000001982                led_set_blink
+                0x00000000000019a6                led_update
+                0x0000000000001a5a                led_is_on
+ .text          0x0000000000001a64      0x43c /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(log.o)
+                0x0000000000001a64                log_is_data_valid
+                0x0000000000001ab0                log_init
+                0x0000000000001c3a                log_update
+                0x0000000000001ca6                log_update_noisr
+                0x0000000000001d0a                log_add_record
+                0x0000000000001dac                log_clear
+                0x0000000000001de6                log_get_num_entries
+                0x0000000000001e18                log_get_record
+ .text          0x0000000000001ea0      0x1be /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(ntp.o)
+                0x0000000000001ea0                ntp_sync_network_time
+ .text          0x000000000000205e      0x5d8 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(rtc.o)
+                0x000000000000205e                rtc_init
+                0x0000000000002062                rtc_get_date
+                0x0000000000002066                rtc_set_date
+                0x000000000000207a                is_leapyear
+                0x00000000000020ae                rtc_set_by_datestr
+                0x0000000000002378                get_month
+                0x0000000000002408                rtc_num2datestr
+                0x000000000000260e                rtc_get_date_string
+ .text          0x0000000000002636       0xea /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(signature.o)
+                0x0000000000002636                signature_set
+                0x00000000000026fe                check_for_test_start
+ .text          0x0000000000002720      0xb78 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(socket.o)
+                0x0000000000002720                udpsocket_open_multicast
+                0x00000000000027a6                udpsocket_is_open
+                0x00000000000027b6                socket_is_active
+                0x00000000000027d2                socket_is_listening
+                0x00000000000027e2                socket_is_established
+                0x00000000000027f2                socket_is_closed
+                0x0000000000002800                udpsocket_is_closed
+                0x0000000000002804                socket_close
+                0x000000000000286a                udpsocket_open
+                0x0000000000002872                socket_open
+                0x000000000000287a                udpsocket_close
+                0x000000000000287e                socket_listen
+                0x000000000000289c                socket_connect
+                0x0000000000002904                socket_disconnect
+                0x000000000000290a                socket_send
+                0x0000000000002996                socket_recv
+                0x0000000000002a0a                socket_recv_available
+                0x0000000000002a0e                udpsocket_recv_available
+                0x0000000000002a12                socket_peek
+                0x0000000000002a22                udpsocket_sendto
+                0x0000000000002ac6                udpsocket_recv_data
+                0x0000000000002b08                udpsocket_recvfrom
+                0x0000000000002c5a                socket_igmpsend
+                0x0000000000002cb8                udpsocket_add_to_datagram
+                0x0000000000002cfe                socket_writestr
+                0x0000000000002d1e                socket_writechar
+                0x0000000000002d40                socket_writequotedstring
+                0x0000000000002d66                socket_writedate
+                0x0000000000002d80                socket_writehex8
+                0x0000000000002dbc                socket_write_macaddress
+                0x0000000000002e0e                socket_writehex16
+                0x0000000000002e28                socket_writedec32
+                0x0000000000002f4e                udpsocket_start_datagram
+                0x0000000000002f98                udpsocket_send_datagram
+                0x0000000000002fd4                socket_received_line
+                0x0000000000003030                socket_is_blank_line
+                0x0000000000003074                socket_recv_compare
+                0x0000000000003120                socket_flush_line
+                0x00000000000031b2                socket_recv_int
+ .text          0x0000000000003298       0x5c /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(spi.o)
+                0x0000000000003298                spi_init
+                0x00000000000032bc                spi_is_locked
+                0x00000000000032c2                spi_begin_transfer
+                0x00000000000032de                spi_transfer
+                0x00000000000032ec                spi_end_transfer
+ .text          0x00000000000032f4      0x144 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(str.o)
+                0x00000000000032f4                mem_cpy
+                0x000000000000330c                mem_set
+                0x0000000000003320                mem_cmp
+                0x000000000000334e                str_cpy
+                0x0000000000003362                str_len
+                0x0000000000003374                str_writeudec16
+ .text          0x0000000000003438       0x6e /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(temp.o)
+                0x0000000000003438                temp_init
+                0x0000000000003446                temp_is_data_ready
+                0x000000000000345c                temp_start
+                0x0000000000003468                temp_get
+ .text          0x00000000000034a6      0x170 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(tempfsm.o)
+                0x00000000000034a6                tempfsm_init
+                0x00000000000034a8                tempfsm_update
+                0x000000000000360c                tempfsm_reset
+ .text          0x0000000000003616       0x9a /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(timer1.o)
+                0x0000000000003616                __vector_11
+                0x0000000000003660                timer1_init
+                0x0000000000003680                timer1_get
+                0x0000000000003698                timer1_clear
+ .text          0x00000000000036b0      0x23c /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(uart.o)
+                0x00000000000036b0                uart_init
+                0x00000000000036b8                uart_writechar
+                0x00000000000036bc                uart_writestr
+                0x00000000000036d4                uart_writehex8
+                0x0000000000003706                uart_writehex16
+                0x0000000000003718                uart_writedec32
+                0x0000000000003840                uart_is_connected
+                0x0000000000003844                uart_is_packet_available
+                0x0000000000003848                uart_readpacket
+                0x00000000000038a8                uart_writeip
+ .text          0x00000000000038ec      0x214 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(util.o)
+                0x00000000000038ec                str_cmp
+                0x0000000000003922                update_checksum
+                0x000000000000394a                random_seed
+                0x0000000000003980                random
+                0x0000000000003a82                strtoi
+ .text          0x0000000000003b00       0xc6 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(vpd.o)
+                0x0000000000003b00                vpd_is_data_valid
+                0x0000000000003b40                vpd_write_defaults
+                0x0000000000003b94                vpd_init
+ .text          0x0000000000003bc6      0xbfe /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(w5x00.o)
+                0x0000000000003bc6                W5x_writebuf
+                0x0000000000003ccc                W5x_write
+                0x0000000000003cee                W5x_config
+                0x0000000000003e8a                W5x_readbuf
+                0x0000000000003f94                W5x_read
+                0x0000000000003fb6                W5x_readSn
+                0x0000000000003fc6                W5x_writeSn
+                0x0000000000003fdc                W5x_readbufSn
+                0x0000000000003ff2                W5x_writebufSn
+                0x0000000000004008                W5x_read_data
+                0x000000000000408e                W5x_writeMR
+                0x0000000000004098                W5x_readMR
+                0x00000000000040a0                isW5100
+                0x0000000000004116                isW5500
+                0x000000000000418c                W5x_init
+                0x000000000000419a                W5x_writebufGAR
+                0x00000000000041a8                W5x_readbufGAR
+                0x00000000000041b6                W5x_writebufSUBR
+                0x00000000000041c4                W5x_readbufSUBR
+                0x00000000000041d2                W5x_writebufSHAR
+                0x00000000000041e0                W5x_readbufSHAR
+                0x00000000000041ee                W5x_writebufSIPR
+                0x00000000000041fc                W5x_readbufSIPR
+                0x000000000000420a                W5x_writeIR
+                0x0000000000004214                W5x_readIR
+                0x000000000000421c                W5x_writeRTR
+                0x0000000000004236                W5x_readRTR
+                0x0000000000004260                W5x_writebufUIPR
+                0x000000000000426e                W5x_readbufUIPR
+                0x000000000000427c                W5x_writeUPORT
+                0x0000000000004296                W5x_readUPORT
+                0x00000000000042c0                W5x_writeSnMR
+                0x00000000000042ca                W5x_readSnMR
+                0x00000000000042d2                W5x_writeSnCR
+                0x00000000000042dc                W5x_readSnCR
+                0x00000000000042e4                W5x_execCmdSn
+                0x00000000000042fa                W5x_writeSnIR
+                0x0000000000004304                W5x_readSnIR
+                0x000000000000430c                W5x_writeSnSR
+                0x0000000000004316                W5x_readSnSR
+                0x000000000000431e                W5x_writeSnPORT
+                0x0000000000004340                W5x_readSnPORT
+                0x0000000000004370                W5x_writeSnDHAR
+                0x000000000000437e                W5x_readSnDHAR
+                0x000000000000438c                W5x_writeSnDIPR
+                0x000000000000439a                W5x_readSnDIPR
+                0x00000000000043a8                W5x_writeSnDPORT
+                0x00000000000043ca                W5x_readSnDPORT
+                0x00000000000043fa                W5x_writeSnMSSR
+                0x000000000000441c                W5x_readSnMSSR
+                0x000000000000444c                W5x_writeSnTX_FSR
+                0x000000000000446e                W5x_readSnTX_FSR
+                0x000000000000449e                W5x_getTXFreeSize
+                0x00000000000044d6                W5x_writeSnTX_RD
+                0x00000000000044f8                W5x_readSnTX_RD
+                0x0000000000004528                W5x_writeSnTX_WR
+                0x000000000000454a                W5x_send_data_processing_offset
+                0x00000000000045e0                W5x_send_data_processing
+                0x00000000000045ec                W5x_readSnTX_WR
+                0x000000000000461c                W5x_writeSnRX_RSR
+                0x000000000000463e                W5x_readSnRX_RSR
+                0x000000000000466e                W5x_getRXReceivedSize
+                0x00000000000046a6                W5x_writeSnRX_RD
+                0x00000000000046c8                W5x_readSnRX_RD
+                0x00000000000046f8                W5x_recv_data_processing_offset
+                0x0000000000004762                W5x_recv_data_processing
+                0x0000000000004772                W5x_writeSnRX_WR
+                0x0000000000004794                W5x_readSnRX_WR
+ .text          0x00000000000047c4       0x46 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(wdt.o)
+                0x00000000000047c4                __vector_6
+                0x00000000000047e2                wdt_init
+                0x00000000000047fa                wdt_reset
+                0x00000000000047fe                wdt_force_restart
+ .text          0x000000000000480a      0x43c /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(serial.o)
+                0x000000000000480a                serial_init
+                0x0000000000004830                __vector_18
+                0x0000000000004a80                __vector_19
+                0x0000000000004ae6                serial_rxchars
+                0x0000000000004af4                serial_popchar
+                0x0000000000004b3e                serial_isconnected
+                0x0000000000004b8c                serial_is_packet_ready
+                0x0000000000004b92                serial_writechar
+                0x0000000000004bf2                serial_writestr
+                0x0000000000004c1c                serial_writestr_P
+ .text          0x0000000000004c46        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .text          0x0000000000004c46        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .text          0x0000000000004c46        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+ .text          0x0000000000004c46        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .text          0x0000000000004c46        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .text          0x0000000000004c46        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .text          0x0000000000004c46        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text          0x0000000000004c46        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+ .text          0x0000000000004c46        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text          0x0000000000004c46        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text          0x0000000000004c46        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
+ .text          0x0000000000004c46        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .text          0x0000000000004c46        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                0x0000000000004c46                . = ALIGN (0x2)
  *(.text.*)
- .text.startup  0x0000000000004b9a      0x178 obj/Release/main.o
-                0x0000000000004b9a                main
+ .text.startup  0x0000000000004c46      0x178 obj/Release/main.o
+                0x0000000000004c46                main
  .text.libgcc.mul
-                0x0000000000004d12       0x20 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
-                0x0000000000004d12                __mulsi3
+                0x0000000000004dbe       0x20 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+                0x0000000000004dbe                __mulsi3
  .text.libgcc.div
-                0x0000000000004d32        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
- .text.libgcc   0x0000000000004d32        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+                0x0000000000004dde        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc   0x0000000000004dde        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
  .text.libgcc.prologue
-                0x0000000000004d32        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+                0x0000000000004dde        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
  .text.libgcc.builtins
-                0x0000000000004d32        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+                0x0000000000004dde        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
  .text.libgcc.fmul
-                0x0000000000004d32        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+                0x0000000000004dde        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
  .text.libgcc.fixed
-                0x0000000000004d32        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+                0x0000000000004dde        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
  .text.libgcc.mul
-                0x0000000000004d32        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+                0x0000000000004dde        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
  .text.libgcc.div
-                0x0000000000004d32       0x28 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
-                0x0000000000004d32                __udivmodhi4
- .text.libgcc   0x0000000000004d5a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+                0x0000000000004dde       0x28 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+                0x0000000000004dde                __udivmodhi4
+ .text.libgcc   0x0000000000004e06        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
  .text.libgcc.prologue
-                0x0000000000004d5a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+                0x0000000000004e06        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
  .text.libgcc.builtins
-                0x0000000000004d5a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+                0x0000000000004e06        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
  .text.libgcc.fmul
-                0x0000000000004d5a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+                0x0000000000004e06        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
  .text.libgcc.fixed
-                0x0000000000004d5a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+                0x0000000000004e06        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
  .text.libgcc.mul
-                0x0000000000004d5a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+                0x0000000000004e06        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
  .text.libgcc.div
-                0x0000000000004d5a       0x28 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
-                0x0000000000004d5a                __divmodhi4
-                0x0000000000004d5a                _div
- .text.libgcc   0x0000000000004d82        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+                0x0000000000004e06       0x28 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+                0x0000000000004e06                __divmodhi4
+                0x0000000000004e06                _div
+ .text.libgcc   0x0000000000004e2e        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
  .text.libgcc.prologue
-                0x0000000000004d82        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+                0x0000000000004e2e        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
  .text.libgcc.builtins
-                0x0000000000004d82        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+                0x0000000000004e2e        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
  .text.libgcc.fmul
-                0x0000000000004d82        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+                0x0000000000004e2e        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
  .text.libgcc.fixed
-                0x0000000000004d82        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+                0x0000000000004e2e        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
  .text.libgcc.mul
-                0x0000000000004d82        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+                0x0000000000004e2e        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
  .text.libgcc.div
-                0x0000000000004d82       0x44 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
-                0x0000000000004d82                __udivmodsi4
- .text.libgcc   0x0000000000004dc6        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+                0x0000000000004e2e       0x44 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+                0x0000000000004e2e                __udivmodsi4
+ .text.libgcc   0x0000000000004e72        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
  .text.libgcc.prologue
-                0x0000000000004dc6        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+                0x0000000000004e72        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
  .text.libgcc.builtins
-                0x0000000000004dc6        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+                0x0000000000004e72        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
  .text.libgcc.fmul
-                0x0000000000004dc6        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+                0x0000000000004e72        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
  .text.libgcc.fixed
-                0x0000000000004dc6        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+                0x0000000000004e72        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
  .text.libgcc.mul
-                0x0000000000004dc6        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+                0x0000000000004e72        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
  .text.libgcc.div
-                0x0000000000004dc6       0x2e /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
-                0x0000000000004dc6                __divmodsi4
- .text.libgcc   0x0000000000004df4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+                0x0000000000004e72       0x2e /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+                0x0000000000004e72                __divmodsi4
+ .text.libgcc   0x0000000000004ea0        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
  .text.libgcc.prologue
-                0x0000000000004df4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+                0x0000000000004ea0        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
  .text.libgcc.builtins
-                0x0000000000004df4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+                0x0000000000004ea0        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
  .text.libgcc.fmul
-                0x0000000000004df4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+                0x0000000000004ea0        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
  .text.libgcc.fixed
-                0x0000000000004df4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+                0x0000000000004ea0        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
  .text.libgcc.mul
-                0x0000000000004df4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+                0x0000000000004ea0        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
  .text.libgcc.div
-                0x0000000000004df4       0x10 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
-                0x0000000000004df4                __negsi2
- .text.libgcc   0x0000000000004e04        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+                0x0000000000004ea0       0x10 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+                0x0000000000004ea0                __negsi2
+ .text.libgcc   0x0000000000004eb0        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
  .text.libgcc.prologue
-                0x0000000000004e04        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+                0x0000000000004eb0        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
  .text.libgcc.builtins
-                0x0000000000004e04        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+                0x0000000000004eb0        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
  .text.libgcc.fmul
-                0x0000000000004e04        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+                0x0000000000004eb0        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
  .text.libgcc.fixed
-                0x0000000000004e04        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+                0x0000000000004eb0        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
  .text.libgcc.mul
-                0x0000000000004e04        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                0x0000000000004eb0        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
  .text.libgcc.div
-                0x0000000000004e04        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
- .text.libgcc   0x0000000000004e04        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                0x0000000000004eb0        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc   0x0000000000004eb0        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
  .text.libgcc.prologue
-                0x0000000000004e04        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                0x0000000000004eb0        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
  .text.libgcc.builtins
-                0x0000000000004e04        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                0x0000000000004eb0        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
  .text.libgcc.fmul
-                0x0000000000004e04        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                0x0000000000004eb0        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
  .text.libgcc.fixed
-                0x0000000000004e04        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                0x0000000000004eb0        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
  .text.libgcc.mul
-                0x0000000000004e04        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+                0x0000000000004eb0        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
  .text.libgcc.div
-                0x0000000000004e04        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
- .text.libgcc   0x0000000000004e04        0xc /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
-                0x0000000000004e04                __tablejump2__
+                0x0000000000004eb0        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+ .text.libgcc   0x0000000000004eb0        0xc /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+                0x0000000000004eb0                __tablejump2__
  .text.libgcc.prologue
-                0x0000000000004e10        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+                0x0000000000004ebc        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
  .text.libgcc.builtins
-                0x0000000000004e10        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+                0x0000000000004ebc        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
  .text.libgcc.fmul
-                0x0000000000004e10        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+                0x0000000000004ebc        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
  .text.libgcc.fixed
-                0x0000000000004e10        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+                0x0000000000004ebc        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
  .text.libgcc.mul
-                0x0000000000004e10        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+                0x0000000000004ebc        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
  .text.libgcc.div
-                0x0000000000004e10        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
- .text.libgcc   0x0000000000004e10        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+                0x0000000000004ebc        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000004ebc        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
  .text.libgcc.prologue
-                0x0000000000004e10        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+                0x0000000000004ebc        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
  .text.libgcc.builtins
-                0x0000000000004e10        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+                0x0000000000004ebc        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
  .text.libgcc.fmul
-                0x0000000000004e10        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+                0x0000000000004ebc        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
  .text.libgcc.fixed
-                0x0000000000004e10        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+                0x0000000000004ebc        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
  .text.libgcc.mul
-                0x0000000000004e10        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+                0x0000000000004ebc        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
  .text.libgcc.div
-                0x0000000000004e10        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
- .text.libgcc   0x0000000000004e10        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+                0x0000000000004ebc        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000000000004ebc        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
  .text.libgcc.prologue
-                0x0000000000004e10        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+                0x0000000000004ebc        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
  .text.libgcc.builtins
-                0x0000000000004e10        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+                0x0000000000004ebc        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
  .text.libgcc.fmul
-                0x0000000000004e10        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+                0x0000000000004ebc        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
  .text.libgcc.fixed
-                0x0000000000004e10        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+                0x0000000000004ebc        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
  .text.libgcc.mul
-                0x0000000000004e10        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
+                0x0000000000004ebc        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
  .text.libgcc.div
-                0x0000000000004e10        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
- .text.libgcc   0x0000000000004e10        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
+                0x0000000000004ebc        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
+ .text.libgcc   0x0000000000004ebc        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
  .text.libgcc.prologue
-                0x0000000000004e10        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
+                0x0000000000004ebc        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
  .text.libgcc.builtins
-                0x0000000000004e10        0xe /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
-                0x0000000000004e10                __bswapsi2
+                0x0000000000004ebc        0xe /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
+                0x0000000000004ebc                __bswapsi2
  .text.libgcc.fmul
-                0x0000000000004e1e        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
+                0x0000000000004eca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
  .text.libgcc.fixed
-                0x0000000000004e1e        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
+                0x0000000000004eca        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
  .text.libgcc.mul
-                0x0000000000004e1e       0x1e /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
-                0x0000000000004e1e                __umulhisi3
+                0x0000000000004eca       0x1e /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+                0x0000000000004eca                __umulhisi3
  .text.libgcc.div
-                0x0000000000004e3c        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
- .text.libgcc   0x0000000000004e3c        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+                0x0000000000004ee8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc   0x0000000000004ee8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
  .text.libgcc.prologue
-                0x0000000000004e3c        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+                0x0000000000004ee8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
  .text.libgcc.builtins
-                0x0000000000004e3c        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+                0x0000000000004ee8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
  .text.libgcc.fmul
-                0x0000000000004e3c        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+                0x0000000000004ee8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
  .text.libgcc.fixed
-                0x0000000000004e3c        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+                0x0000000000004ee8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
  .text.libgcc.mul
-                0x0000000000004e3c       0x16 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
-                0x0000000000004e3c                __muluhisi3
+                0x0000000000004ee8       0x16 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                0x0000000000004ee8                __muluhisi3
  .text.libgcc.div
-                0x0000000000004e52        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
- .text.libgcc   0x0000000000004e52        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                0x0000000000004efe        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+ .text.libgcc   0x0000000000004efe        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
  .text.libgcc.prologue
-                0x0000000000004e52        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                0x0000000000004efe        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
  .text.libgcc.builtins
-                0x0000000000004e52        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                0x0000000000004efe        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
  .text.libgcc.fmul
-                0x0000000000004e52        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                0x0000000000004efe        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
  .text.libgcc.fixed
-                0x0000000000004e52        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
-                0x0000000000004e52                . = ALIGN (0x2)
+                0x0000000000004efe        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                0x0000000000004efe                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000000000004e52        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
-                0x0000000000004e52                exit
-                0x0000000000004e52                _exit
+ .fini9         0x0000000000004efe        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                0x0000000000004efe                exit
+                0x0000000000004efe                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -772,18 +772,18 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000000000004e52        0x4 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .fini0         0x0000000000004efe        0x4 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
  *(.fini0)
-                0x0000000000004e56                _etext = .
+                0x0000000000004f02                _etext = .
 
-.siminfo        0x0000000000004e56       0x28
- .siminfo       0x0000000000004e56       0x28 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(uart.o)
-                0x0000000000004e56                siminfo_serial_out
-                0x0000000000004e61                siminfo_serial_in
-                0x0000000000004e6c                siminfo_cpufrequency
-                0x0000000000004e72                siminfo_device
+.siminfo        0x0000000000004f02       0x28
+ .siminfo       0x0000000000004f02       0x28 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(uart.o)
+                0x0000000000004f02                siminfo_serial_out
+                0x0000000000004f0d                siminfo_serial_in
+                0x0000000000004f18                siminfo_cpufrequency
+                0x0000000000004f1e                siminfo_device
 
-.data           0x0000000000800100      0x2a2 load address 0x0000000000004e7e
+.data           0x0000000000800100      0x344 load address 0x0000000000004f2a
                 0x0000000000800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x0000000000800100        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
@@ -837,104 +837,103 @@ END GROUP
  .rodata        0x0000000000800185       0x10 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(w5x00.o)
  *(.rodata*)
  .rodata.str1.1
-                0x0000000000800195      0x17a obj/Release/httpfsm.o
-                                        0x189 (size before relaxing)
+                0x0000000000800195      0x21d obj/Release/httpfsm.o
+                                        0x22a (size before relaxing)
  .rodata.str1.1
-                0x000000000080030f       0x1c obj/Release/main.o
+                0x00000000008003b2       0x1c obj/Release/main.o
  .rodata.str1.1
-                0x000000000080032b        0xa /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(alarm.o)
+                0x00000000008003ce        0xa /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(alarm.o)
                                           0xf (size before relaxing)
  .rodata.str1.1
-                0x0000000000800335        0x7 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(Dhcp.o)
+                0x00000000008003d8        0x7 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(Dhcp.o)
  .rodata.str1.1
-                0x000000000080033c       0x13 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(ntp.o)
+                0x00000000008003df       0x13 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(ntp.o)
  .rodata.str1.1
-                0x000000000080034f       0x14 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(rtc.o)
+                0x00000000008003f2       0x14 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(rtc.o)
  .rodata.str1.1
-                0x0000000000800363       0x3a /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(signature.o)
+                0x0000000000800406       0x3a /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(signature.o)
  .rodata.str1.1
-                0x000000000080039d        0x4 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(tempfsm.o)
+                0x0000000000800440        0x4 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(tempfsm.o)
                                           0x6 (size before relaxing)
  .rodata.str1.1
-                0x00000000008003a1        0x3 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(uart.o)
+                0x0000000000800444        0x3 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(uart.o)
  *(.gnu.linkonce.d*)
-                0x00000000008003a4                . = ALIGN (0x2)
- *fill*         0x00000000008003a1        0x1 
-                0x00000000008003a2                _edata = .
-                0x00000000008003a2                PROVIDE (__data_end, .)
+                0x0000000000800448                . = ALIGN (0x2)
+                0x0000000000800448                _edata = .
+                0x0000000000800448                PROVIDE (__data_end, .)
 
-.bss            0x00000000008003a2      0x203
-                0x00000000008003a2                PROVIDE (__bss_start, .)
+.bss            0x0000000000800444      0x203
+                0x0000000000800444                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x00000000008003a2        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
- .bss           0x00000000008003a2        0x6 obj/Release/httpfsm.o
- .bss           0x00000000008003a8        0x0 obj/Release/main.o
- .bss           0x00000000008003a8        0x0 obj/Release/temputil.o
- .bss           0x00000000008003a8        0x0 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(alarm.o)
- .bss           0x00000000008003a8        0x1 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(config.o)
- .bss           0x00000000008003a9        0xe /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(delay.o)
- .bss           0x00000000008003b7       0x43 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(Dhcp.o)
- .bss           0x00000000008003fa        0x0 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(eeprom.o)
- .bss           0x00000000008003fa        0x5 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(led.o)
- .bss           0x00000000008003ff       0x83 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(log.o)
- .bss           0x0000000000800482        0x0 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(ntp.o)
- .bss           0x0000000000800482        0x0 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(rtc.o)
- .bss           0x0000000000800482        0x0 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(signature.o)
- .bss           0x0000000000800482        0x2 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(socket.o)
- .bss           0x0000000000800484        0x1 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(spi.o)
- .bss           0x0000000000800485        0x0 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(str.o)
- .bss           0x0000000000800485        0x0 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(temp.o)
- .bss           0x0000000000800485        0x2 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(tempfsm.o)
- .bss           0x0000000000800487        0x4 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(timer1.o)
- .bss           0x000000000080048b        0x0 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(uart.o)
- .bss           0x000000000080048b        0x0 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(util.o)
- .bss           0x000000000080048b        0x0 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(vpd.o)
- .bss           0x000000000080048b        0x1 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(w5x00.o)
- .bss           0x000000000080048c        0x0 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(wdt.o)
- .bss           0x000000000080048c        0x7 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(serial.o)
-                0x000000000080048c                txtail
-                0x000000000080048d                txhead
-                0x000000000080048e                rxtail
-                0x000000000080048f                rxhead
- .bss           0x0000000000800493        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
- .bss           0x0000000000800493        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
- .bss           0x0000000000800493        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
- .bss           0x0000000000800493        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
- .bss           0x0000000000800493        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
- .bss           0x0000000000800493        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
- .bss           0x0000000000800493        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
- .bss           0x0000000000800493        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
- .bss           0x0000000000800493        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
- .bss           0x0000000000800493        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
- .bss           0x0000000000800493        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
- .bss           0x0000000000800493        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
- .bss           0x0000000000800493        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+ .bss           0x0000000000800444        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ .bss           0x0000000000800444        0x6 obj/Release/httpfsm.o
+ .bss           0x000000000080044a        0x0 obj/Release/main.o
+ .bss           0x000000000080044a        0x0 obj/Release/temputil.o
+ .bss           0x000000000080044a        0x0 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(alarm.o)
+ .bss           0x000000000080044a        0x1 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(config.o)
+ .bss           0x000000000080044b        0xe /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(delay.o)
+ .bss           0x0000000000800459       0x43 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(Dhcp.o)
+ .bss           0x000000000080049c        0x0 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(eeprom.o)
+ .bss           0x000000000080049c        0x5 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(led.o)
+ .bss           0x00000000008004a1       0x83 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(log.o)
+ .bss           0x0000000000800524        0x0 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(ntp.o)
+ .bss           0x0000000000800524        0x0 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(rtc.o)
+ .bss           0x0000000000800524        0x0 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(signature.o)
+ .bss           0x0000000000800524        0x2 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(socket.o)
+ .bss           0x0000000000800526        0x1 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(spi.o)
+ .bss           0x0000000000800527        0x0 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(str.o)
+ .bss           0x0000000000800527        0x0 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(temp.o)
+ .bss           0x0000000000800527        0x2 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(tempfsm.o)
+ .bss           0x0000000000800529        0x4 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(timer1.o)
+ .bss           0x000000000080052d        0x0 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(uart.o)
+ .bss           0x000000000080052d        0x0 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(util.o)
+ .bss           0x000000000080052d        0x0 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(vpd.o)
+ .bss           0x000000000080052d        0x1 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(w5x00.o)
+ .bss           0x000000000080052e        0x0 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(wdt.o)
+ .bss           0x000000000080052e        0x7 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(serial.o)
+                0x000000000080052e                txtail
+                0x000000000080052f                txhead
+                0x0000000000800530                rxtail
+                0x0000000000800531                rxhead
+ .bss           0x0000000000800535        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .bss           0x0000000000800535        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .bss           0x0000000000800535        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+ .bss           0x0000000000800535        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .bss           0x0000000000800535        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .bss           0x0000000000800535        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .bss           0x0000000000800535        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .bss           0x0000000000800535        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+ .bss           0x0000000000800535        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .bss           0x0000000000800535        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .bss           0x0000000000800535        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
+ .bss           0x0000000000800535        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .bss           0x0000000000800535        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
  *(.bss*)
  *(COMMON)
- COMMON         0x0000000000800493       0x12 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(config.o)
-                0x0000000000800493                config
- COMMON         0x00000000008004a5       0x45 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(eeprom.o)
-                0x00000000008004a5                write_busy
-                0x00000000008004a6                writeaddr
-                0x00000000008004a8                writesize
-                0x00000000008004a9                writebuf
-                0x00000000008004e9                bufidx
- COMMON         0x00000000008004ea        0x4 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(rtc.o)
-                0x00000000008004ea                rtc_base
- COMMON         0x00000000008004ee       0x37 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(vpd.o)
-                0x00000000008004ee                vpd
- COMMON         0x0000000000800525       0x80 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(serial.o)
-                0x0000000000800525                rxbuf
-                0x0000000000800565                txbuf
-                0x00000000008005a5                PROVIDE (__bss_end, .)
-                0x0000000000004e7e                __data_load_start = LOADADDR (.data)
-                0x0000000000005120                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x0000000000800535       0x12 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(config.o)
+                0x0000000000800535                config
+ COMMON         0x0000000000800547       0x45 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(eeprom.o)
+                0x0000000000800547                write_busy
+                0x0000000000800548                writeaddr
+                0x000000000080054a                writesize
+                0x000000000080054b                writebuf
+                0x000000000080058b                bufidx
+ COMMON         0x000000000080058c        0x4 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(rtc.o)
+                0x000000000080058c                rtc_base
+ COMMON         0x0000000000800590       0x37 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(vpd.o)
+                0x0000000000800590                vpd
+ COMMON         0x00000000008005c7       0x80 /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(serial.o)
+                0x00000000008005c7                rxbuf
+                0x0000000000800607                txbuf
+                0x0000000000800647                PROVIDE (__bss_end, .)
+                0x0000000000004f2a                __data_load_start = LOADADDR (.data)
+                0x000000000000526e                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00000000008005a5        0x0
+.noinit         0x0000000000800647        0x0
                 [!provide]                        PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                        PROVIDE (__noinit_end, .)
-                0x00000000008005a5                _end = .
+                0x0000000000800647                _end = .
                 [!provide]                        PROVIDE (__heap_start, .)
 
 .eeprom         0x0000000000810000        0x0
@@ -1377,6 +1376,7 @@ log_add_record                                    /home/jared/SER486-EmbeddedC/F
                                                   obj/Release/main.o
 log_clear                                         /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(log.o)
                                                   obj/Release/main.o
+                                                  obj/Release/httpfsm.o
 log_get_num_entries                               /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(log.o)
                                                   obj/Release/httpfsm.o
 log_get_record                                    /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(log.o)
@@ -1418,6 +1418,7 @@ rtc_init                                          /home/jared/SER486-EmbeddedC/F
 rtc_num2datestr                                   /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(rtc.o)
                                                   /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(socket.o)
                                                   /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(ntp.o)
+                                                  obj/Release/httpfsm.o
 rtc_set_by_datestr                                /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(rtc.o)
                                                   /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(ntp.o)
 rtc_set_date                                      /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(rtc.o)
@@ -1465,6 +1466,7 @@ socket_listen                                     /home/jared/SER486-EmbeddedC/F
 socket_open                                       /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(socket.o)
                                                   obj/Release/main.o
 socket_peek                                       /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(socket.o)
+                                                  obj/Release/httpfsm.o
 socket_received_line                              /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(socket.o)
 socket_recv                                       /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(socket.o)
                                                   obj/Release/httpfsm.o
@@ -1540,6 +1542,7 @@ uart_readpacket                                   /home/jared/SER486-EmbeddedC/F
 uart_writechar                                    /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(uart.o)
 uart_writedec32                                   /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(uart.o)
                                                   /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(alarm.o)
+                                                  obj/Release/httpfsm.o
 uart_writehex16                                   /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(uart.o)
 uart_writehex8                                    /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(uart.o)
 uart_writeip                                      /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(uart.o)
@@ -1549,6 +1552,7 @@ uart_writestr                                     /home/jared/SER486-EmbeddedC/F
                                                   /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(ntp.o)
                                                   /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(alarm.o)
                                                   obj/Release/main.o
+                                                  obj/Release/httpfsm.o
 udpsocket_add_to_datagram                         /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(socket.o)
                                                   /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(Dhcp.o)
                                                   /home/jared/SER486-EmbeddedC/Final_Project/lib_projd.a(alarm.o)
